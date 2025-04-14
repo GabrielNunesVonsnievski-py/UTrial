@@ -3,7 +3,7 @@
                     <div class="d-flex justify-content-between">
                         <div class="top-menu d-flex align-items-center">
                         </div>
-                        <span class="">TREINAMENTOS</span>
+                        <span class=""><strong>TREINAMENTOS</strong></span>
                         <div class="top-menu d-flex align-items-center">
                             
                             <button type="button" class="nav-link ml-10" id="apps_modal_btn" data-toggle="modal" data-target="#appsModal"><i class="ik ik-grid"></i></button>

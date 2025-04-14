@@ -13,7 +13,7 @@ class Home extends CI_Controller {
 		$data = array(
 			'titulo' => 'Utrial | Home',
 			'sub_titulo' => 'Bem vindo(a)',
-			'icone_view' => 'fa-solid fa-house-user',
+			'icone_view' => 'fa-solid fa-code',
 			'styles' => array(
 				'plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css',
 				'dist/css/estacionar.css',

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Utrial&nbsp;|&nbsp;<?php echo (isset($titulo) ? $titulo : 'Um novo conceito em Cursos!'); ?></title>
+        <title><?php echo (isset($titulo) ? $titulo : 'Um novo conceito em Cursos!'); ?></title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +21,8 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="public/dist/js/theme.js"></script>
         <link rel="stylesheet" href="<?php echo base_url('public/dist/css/theme.min.css');?>">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
         <?php if (isset($styles)): ?>
 

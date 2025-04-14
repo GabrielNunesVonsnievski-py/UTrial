@@ -18,31 +18,17 @@
                 <div class="container">
                     <div class="apps-wrap">
                         <div class="app-item">
-                            <a href="<?php echo base_url('/') ?>"><i class="ik ik-home"></i><span>Home</span></a>
+                            <a href="<?php echo base_url('/') ?>"><i class="fa-solid fa-home"></i><span>Home</span></a>
                         </div>
                         <div class="app-item">
-                            <a href="<?php echo base_url('estacionar'); ?>"><i class="fas fa-parking"></i><span>Estacionar</span></a>
+                            <a href="<?php echo base_url(''); ?>"><i class="fa-solid fa-book-bookmark"></i><span>Cursos</span></a>
                         </div>
                         <div class="app-item">
-                            <a href="<?php echo base_url('mensalistas'); ?>"><i class="fas fa-users"></i><span>Mensalistas</span></a>
+                            <a href="<?php echo base_url(''); ?>"><i class="fas fa-users"></i><span>Alunos</span></a>
                         </div>
                         <div class="app-item">
-                            <a href="<?php echo base_url('mensalidades'); ?>"><i class="fas fa-hand-holding-usd"></i><span>Mensalidades</span></a>
+                            <a href="<?php echo base_url(''); ?>"><i class="fa-solid fa-book-open"></i><span>Aulas</span></a>
                         </div>
-                        <div class="app-item">
-                            <a href="<?php echo base_url('formas'); ?>"><i class="fas fa-comment-dollar"></i><span>Formas De Pagmamento</span></a>
-                        </div>
-                        <div class="app-item">
-                            <a href="<?php echo base_url('usuarios'); ?>"><i class="ik ik-users"></i><span>Usuários</span></a>
-                        </div>
-                        <div class="app-item">
-                            <a href="<?php echo base_url('precificacoes'); ?>"><i class="ik ik-dollar-sign"></i><span>Precificações</span></a>
-                        </div>
-                        <div class="app-item">
-                            <a href="<?php echo base_url('sistema'); ?>"><i class="ik ik-settings"></i><span>Sistemas</span></a>
-                        </div>
-
-                       
                     </div>
                 </div>
             </div>
