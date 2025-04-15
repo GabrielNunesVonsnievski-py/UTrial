@@ -9,7 +9,6 @@ class Home extends CI_Controller {
 	
 	public function index()
 	{
-
 		$data = array(
 			'titulo' => 'Utrial | Home',
 			'sub_titulo' => 'Bem vindo(a)',
