@@ -1,0 +1,80 @@
+BANCO DE DADOS
+
+-----------------------------------------------
+
+CREATE TABLE cursos (
+id INT(5) AUTO_INCREMENT NOT NULL,
+nome VARCHAR(250) NOT NULL,
+mensalidade_id INT NOT NULL,
+duracao DATE NOT NULL,
+
+PRIMARY KEY (id),
+FOREIGN KEY (mensalidade_id) REFERENCES mensalidades (mensalidade_id)
+);
+
+-----------------------------------------------
+
+CREATE TABLE mensalidades (
+id INT(5) AUTO_INCREMENT NOT NULL,
+valor INT(5) NOT NULL,
+ativa INT(1) NOT NULL,
+tipo VARCHAR(250) NOT NULL,
+
+PRIMARY KEY (id)
+);
+
+-----------------------------------------------
+
+CREATE TABLE usuários (
+id INT(5) AUTO_INCREMENT NOT NULL,
+nome VARCHAR(250) NOT NULL,
+cpf VARCHAR(11) NOT NULL,
+email VARCHAR(250) NOT NULL,
+telefone INT NOT NULL,
+mensalidade_id
+
+);
+
+-----------------------------------------------
+
+CREATE TABLE matriculas
+id INT AUTO_INCREMENT NOT NULL,
+usuario_id
+curso_id
+data_matricula
+status
+
+-----------------------------------------------
+
+CREATE TABLE aulas
+id
+curso_id
+titulo
+descricao
+video_url
+ordem
+-----------------------------------------------
+
+CREATE TABLE avaliacoes
+id
+usuario_id
+curso_id
+nota
+comentario
+data
+horario_inicio
+horario_fim
+
+-----------------------------------------------
+
+CREATE TABLE user_group (
+id INT AUTO_INCREMENT NOT NULL,
+nome VARCHAR(250) NOT NULL,
+email VARCHAR(250) NOT NULL,
+senha INT NOT NULL,
+tipo INT NOT NULL,  (1= ADM, 2=USUARIO_NORMAL)
+
+
+);
+
+-----------------------------------------------

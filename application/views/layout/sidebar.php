@@ -12,7 +12,7 @@
         <div class="nav-container">
             <nav id="main-menu-navigation" class="navigation-main">                
 
-                <div class="nav-lavel bg-dark text-center text-white"><strong>Cursos</strong></div>
+                <div class="nav-lavel bg-dark text-center text-white"><strong>CURSOS</strong></div>
 
                 <!-- FRONT-END -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('frontend')">
@@ -49,25 +49,34 @@
                 </div>
                 
                 <!-- OUTROS -->
-                <div class="nav-item dropdown-toggle" onclick="toggleDropdown('outros')">
+                <div class="nav-item dropdown-toggle text-white" onclick="toggleDropdown('outros')">
                     <div class="nav-lavel bg-dark text-center text-white"><strong>Outros</strong></div>
                 </div>
-                <div id="outros" class="dropdown-content">
-                    <a href=""><i class="fa-solid fa-brain"></i> IA</a>
-                    <a href=""><i class="fa-solid fa-user-secret"></i> Cyber Security</a>
-                    <a href=""><i class="fa-solid fa-file-excel"></i> Excel</a>
-                    <a href=""><i class="fa-solid fa-file-word"></i> Word</a>
+                <div id="outros" class="dropdown-content ">
+                    <a href=""  ><i class="fa-solid fa-brain"></i> IA</a>
+                    <a href=""  ><i class="fa-solid fa-user-secret"></i> Cyber Security</a>
+                    <a href=""  ><i class="fa-solid fa-file-excel"></i> Excel</a>
+                    <a href=""  ><i class="fa-solid fa-file-word"></i> Word</a>
+                </div>
+
+                <!-- MEU PAINEL -->
+                <div class="nav-label bg-dark text-center text-white p-2"><strong>MEU PAINEL</strong></div>
+                <div class="painel-links p-2 text-center">
+                    <a href="#" class="painel-item"><i class="fa-solid fa-bookmark"></i> Meus Cursos</a>
+                    <a href="#" class="painel-item"><i class="fa-solid fa-hand-holding-dollar"></i> Minhas Mensalidades</a>
+                    <a href="#" class="painel-item"><i class="fa-solid fa-certificate"></i> Meus Certificados</a>
+                    <a href="#" class="painel-item"><i class="fa-regular fa-circle-user"></i> Minha Conta</a>
                 </div>
 
                 <!-- ADMIN -->
-                <div class="nav-item dropdown-toggle" onclick="toggleDropdown('Administração')">
-                <div class="nav-lavel bg-dark text-center text-white"><strong>Administração</strong></div>
+                <div class="nav-label bg-dark text-center text-white p-2"><strong>ADMINISTRÇÃO</strong></div>
+                <div class="painel-links p-2 text-center">
+                    <a href="<?php echo base_url('/alunos');?>" class="painel-item"><i class="nav-item fa-solid fa-users"></i> Alunos</a>
+                    <a href="#" class="painel-item"><i class="fa-solid fa-book-open"></i> Aulas</a>
+                    <a href="#" class="painel-item"><i class="fa-solid fa-clock"></i> Horários</a>
+                    <a href="#" class="painel-item"><i class="fa-solid fa-newspaper"></i> Avaliações</a>
                 </div>
-                <div id="Administração" class="dropdown-content">
-                    <a href=""><i class="nav-item fa-solid fa-users"></i> Alunos</a>
-                    <a href=""><i class="fa-solid fa-book-open"></i> Aulas</a>
-                    <a href=""><i class="fa-solid fa-clock"></i> Horários</a>
-                </div>
+                
             </nav>
         </div>
     </div>
@@ -76,6 +85,29 @@
 
 
 <style>
+
+.painel-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.painel-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.painel-item:hover {
+    background-color: #495057;
+    text-decoration: none;
+}
 
 .header-brand-img {
     width: 100px;
