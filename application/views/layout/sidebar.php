@@ -16,7 +16,7 @@
 
                 <!-- FRONT-END -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('frontend')">
-                    <div class="nav-lavel bg-dark text-center text-white"><strong>Front-End</strong></div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-window-maximize"></i><strong>Front-End</strong></div>
                 </div>
                 <div id="frontend" class="dropdown-content">
                     <a href=""><i class="fa-brands fa-html5"></i> HTML</a>
@@ -28,7 +28,7 @@
 
                 <!-- BACK-END -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('backend')">
-                    <div class="nav-lavel bg-dark text-center text-white"><strong>Back-End</strong></div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-solid fa-server"></i><strong> Back-End</strong></div>
                 </div>
                 <div id="backend" class="dropdown-content">
                     <a href=""><i class="fa-brands fa-php"></i> PHP</a>
@@ -40,7 +40,7 @@
 
                 <!-- BANCO DE DADOS -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('Banco de dados')">
-                    <div class="nav-lavel bg-dark text-center text-white"><strong>Banco de dados</strong></div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-solid fa-database"></i><strong>Banco de dados</strong></div>
                 </div>
                 <div id="Banco de dados" class="dropdown-content">
                     <a href=""><i class="fa-solid fa-database"></i> SQL</a>
@@ -50,7 +50,7 @@
                 
                 <!-- OUTROS -->
                 <div class="nav-item dropdown-toggle text-white" onclick="toggleDropdown('outros')">
-                    <div class="nav-lavel bg-dark text-center text-white"><strong>Outros</strong></div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-solid fa-ellipsis-vertical"></i><strong>Outros</strong></div>
                 </div>
                 <div id="outros" class="dropdown-content ">
                     <a href=""  ><i class="fa-solid fa-brain"></i> IA</a>
