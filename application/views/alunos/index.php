@@ -36,9 +36,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-show="listaInscricoes.length == 0">
+                                <!-- <tr ng-show="listaALunos.length == 0">
                                     <td class="text-center" colspan="7">Nenhum registro encontrado.</td>
-                                </tr>
+                                </tr> -->
                                 <tr dir-paginate="i in listaInscricoes | filter: pesquisar | itemsPerPage: 10">
                                     <td class="text-center">{{ i.id }}</td>
                                     <td class="name text-left">{{ i.nome | uppercase }}</td>

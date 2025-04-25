@@ -9,7 +9,7 @@ mensalidade_id INT NOT NULL,
 duracao DATE NOT NULL,
 
 PRIMARY KEY (id),
-FOREIGN KEY (mensalidade_id) REFERENCES mensalidades (mensalidade_id)
+FOREIGN KEY (mensalidade_id) REFERENCES mensalidades (id)
 );
 
 -----------------------------------------------
@@ -31,39 +31,53 @@ nome VARCHAR(250) NOT NULL,
 cpf VARCHAR(11) NOT NULL,
 email VARCHAR(250) NOT NULL,
 telefone INT NOT NULL,
-mensalidade_id
+mensalidade_id INT NOT NULL,
 
+PRIMARY KEY (id),
+FOREIGN KEY (mensalidade_id) REFERENCES mensalidades (id)
 );
 
 -----------------------------------------------
 
-CREATE TABLE matriculas
+CREATE TABLE matriculas(
 id INT AUTO_INCREMENT NOT NULL,
-usuario_id
-curso_id
-data_matricula
-status
+usuario_id INT NOT NULL,
+curso_id INT NOT NULL,
+data_matricula DATE NOT NULL,
+status INT(1) NOT NULL,
 
+PRIMARY KEY (id),
+FOREIGN KEY (usuario_id) REFERENCES usuarios (id)
+FOREIGN KEY (curso_id) REFERENCES cursos (id)
+);
 -----------------------------------------------
 
-CREATE TABLE aulas
-id
-curso_id
-titulo
-descricao
-video_url
-ordem
+CREATE TABLE aulas(
+id INT AUTO_INCREMENT NOT NULL,
+curso_id INT NOT NULL,
+titulo VARCHAR NOT NULL,
+descricao VARCHAR(250) NOT NULL,
+video_url VARCHAR(250) NOT NULL,
+
+PRIMARY KEY (id),
+FOREIGN KEY (curso_id) REFERENCES cursos (id)
+);
 -----------------------------------------------
 
-CREATE TABLE avaliacoes
-id
-usuario_id
-curso_id
-nota
-comentario
-data
-horario_inicio
-horario_fim
+CREATE TABLE avaliacoes (
+id INT AUTO_INCREMENT NOT NULL,
+usuario_id INT NOT NULL,
+curso_id INT NOT NULL,
+nota INT(2) NOT NULL,
+comentario VARHCAR(250) NOT NULL,
+data DATE NOT NULL,
+horario_inicio INT NOT NULL,
+horario_fim INT NOT NULL,
+
+PRIMARY KEY (id),
+FOREIGN KEY (usuario_id) REFERENCES usuario (id),
+FOREIGN KEY (curso_id) REFERENCES cursos (id)
+);
 
 -----------------------------------------------
 
@@ -72,9 +86,9 @@ id INT AUTO_INCREMENT NOT NULL,
 nome VARCHAR(250) NOT NULL,
 email VARCHAR(250) NOT NULL,
 senha INT NOT NULL,
-tipo INT NOT NULL,  (1= ADM, 2=USUARIO_NORMAL)
+tipo INT NOT NULL,  (1= ADM, 2=USUARIO_NORMAL),
 
-
+PRIMARY KEY (id)
 );
 
 -----------------------------------------------
