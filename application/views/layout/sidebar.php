@@ -12,11 +12,11 @@
         <div class="nav-container">
             <nav id="main-menu-navigation" class="navigation-main">                
 
-                <div class="nav-lavel bg-dark text-center text-white"><strong>CURSOS</strong></div>
+                <div class="nav-lavel bg-dark text-white"><strong>CURSOS</strong></div>
 
                 <!-- FRONT-END -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('frontend')">
-                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-window-maximize"></i><strong>Front-End</strong></div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-square-caret-down"></i>Front-End</div>
                 </div>
                 <div id="frontend" class="dropdown-content">
                     <a href=""><i class="fa-brands fa-html5"></i> HTML</a>
@@ -28,7 +28,7 @@
 
                 <!-- BACK-END -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('backend')">
-                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-solid fa-server"></i><strong> Back-End</strong></div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-square-caret-down"></i> Back-End</div>
                 </div>
                 <div id="backend" class="dropdown-content">
                     <a href=""><i class="fa-brands fa-php"></i> PHP</a>
@@ -40,7 +40,7 @@
 
                 <!-- BANCO DE DADOS -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('Banco de dados')">
-                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-solid fa-database"></i><strong>Banco de dados</strong></div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-square-caret-down"></i>Banco de dados</div>
                 </div>
                 <div id="Banco de dados" class="dropdown-content">
                     <a href=""><i class="fa-solid fa-database"></i> SQL</a>
@@ -50,17 +50,17 @@
                 
                 <!-- OUTROS -->
                 <div class="nav-item dropdown-toggle text-white" onclick="toggleDropdown('outros')">
-                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-solid fa-ellipsis-vertical"></i><strong>Outros</strong></div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-square-caret-down"></i>Outros</div>
                 </div>
                 <div id="outros" class="dropdown-content ">
                     <a href=""  ><i class="fa-solid fa-brain"></i> IA</a>
-                    <a href=""  ><i class="fa-solid fa-user-secret"></i> Cyber Security</a>
+                    <a href=""  ><i class="fa-solid fa-user-secret"></i> Cyber Segurança</a>
                     <a href=""  ><i class="fa-solid fa-file-excel"></i> Excel</a>
                     <a href=""  ><i class="fa-solid fa-file-word"></i> Word</a>
                 </div>
 
                 <!-- MEU PAINEL -->
-                <div class="nav-label bg-dark text-center text-white p-2"><strong>MEU PAINEL</strong></div>
+                <div class="nav-label bg-dark  text-white p-2"><strong>MEU PAINEL</strong></div>
                 <div class="painel-links p-2 text-center">
                     <a href="#" class="painel-item"><i class="fa-solid fa-bookmark"></i> Meus Cursos</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-hand-holding-dollar"></i> Minhas Mensalidades</a>
@@ -69,7 +69,7 @@
                 </div>
 
                 <!-- ADMIN -->
-                <div class="nav-label bg-dark text-center text-white p-2"><strong>ADMINISTRÇÃO</strong></div>
+                <div class="nav-label bg-dark text-white p-2"><strong>ADMINISTRÇÃO</strong></div>
                 <div class="painel-links p-2 text-center">
                     <a href="<?php echo base_url('/alunos');?>" class="painel-item"><i class="nav-item fa-solid fa-users"></i> Alunos</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-book-open"></i> Aulas</a>
