@@ -21,15 +21,15 @@
                 </div>
             </div>
         
-            <div class="#" style="">
+            <div class="#" style="text-center">
                 <a href="<?php echo base_url('/cursos'); ?>">
-                    <button class="btn btn-primary">Cursos disponíveis</button>
+                    <button class="btn btn-dark btn-respirando">Cursos disponíveis</button>
                 </a>
             </div>
+            <br>
             <div class="row">
                 <div class="col-md-12">
                     <div class="card shadow-sm">
-                    
                         <div class="card-header d-block text-center">
                             <strong>SOBRE NÓS</strong>
                         </div>
@@ -66,6 +66,16 @@
     height: 30px;
     width: 150px;
     box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.47);
+}
+
+@keyframes respirar {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+.btn-respirando {
+  animation: respirar 2s infinite ease-in-out;
 }
 
 </style>
