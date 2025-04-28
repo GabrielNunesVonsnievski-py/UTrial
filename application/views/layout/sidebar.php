@@ -3,7 +3,7 @@
     <div class="sidebar-header bg-dark">
         <a class="header-brand" href="<?php echo base_url('/') ?>">
             <div class="logo-img">
-                <img src="public/src/img/Utrial_logo_ofc_png.png" class="header-brand-img" alt="logo do site utrial">
+                <img src="public/img/Utrial_logo.png" class="header-brand-img" alt="logo do site utrial">
             </div>
         </a>
     </div>
@@ -110,8 +110,8 @@
 }
 
 .header-brand-img {
-    width: 100px;
-    max-height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 .dropdown-content {

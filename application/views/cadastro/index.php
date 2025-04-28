@@ -13,22 +13,34 @@
         <img src="public/src/img/UTrial_logo_ofc_png.png" class="logo" alt="">
     </div>
 
-    <div class="right-side" style="background-color:rgb(37, 41, 46);">
+    <div class="right-side" style="background-color:#25292e;">
         <form class="login-form" method="post" action="processa_login.php">
             <h2>Bem-vindo!</h2>
             <div class="form-group">
+                <label for="email">Nome:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu Nome">
+            </div>
+            <div class="form-group">
+                <label for="email">CPF:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu CPF">
+            </div>
+            <div class="form-group">
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                <input type="email" id="email" name="email" required placeholder="Digite seu E-mail">
+            </div>
+            <div class="form-group">
+                <label for="email">Telefone:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu Telefone">
             </div>
             <div class="form-group">
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
             </div>
-            <button type="submit" class="btn-login">Entrar</button>
+            <button type="submit" class="btn-login">Cadastrar-se</button>
             <br>
             <br>
             <div class="btnCadastro text-center">
-                <a href="<?php echo base_url('cadastro'); ?>" class="btnText">Não tem conta? Cadastrar-se!</a>
+                <a href="<?php echo base_url('/login'); ?>" class="btnText">Tem conta? faça login!</a>
             </div> 
         </form>
     </div>
@@ -46,22 +58,19 @@
             background-color: #2F343B;
         }
 
-        .btnText{
-            color: white;
-        }
-        
         .logo{
             width: 625px;
             height: 625px;
         }
 
-        .btnCadastro{
-            color: #FFFFFF;
+        .btnText{
+            color: white;
+            
         }
 
         .btnCadastro :hover{
-            color:rgb(138, 138, 138);
-            transition: background 0.2s;
+            color:rgb(129, 129, 129);
+            transition: background 1.5s;
 
         }
             
@@ -83,12 +92,12 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px;
+            padding: 10px;
         }
         .login-form {
             width: 100%;
             max-width: 300px;
-            padding: 30px;
+            padding: 15px;
             border-radius: 20px;
         }
         .login-form h2 {

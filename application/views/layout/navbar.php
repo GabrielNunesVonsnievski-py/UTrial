@@ -17,7 +17,7 @@
                     <a class="header-dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true"><i class="ik ik-user ik-2x text-white"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <a data-toggle="tooltip" data-placement="left" title="Gerenciar perfil" class="dropdown-item" href=""><i class="ik ik-user dropdown-icon"></i> Perfil</a>
-                        <a data-toggle="tooltip" data-placement="left" title="Encerrar a sessão" class="dropdown-item" href=""><i class="ik ik-power dropdown-icon"></i> Sair</a>
+                        <a data-toggle="tooltip" data-placement="left" title="Encerrar a sessão" class="dropdown-item" href="<?php echo base_url('/login'); ?>"><i class="ik ik-power dropdown-icon"></i> Sair</a>
                     </div>
                 </div>
             </div>

@@ -2,14 +2,24 @@ BANCO DE DADOS
 
 -----------------------------------------------
 
+CREATE TABLE precificacao (
+id INT AUTO_INCREMENT NOT NULL,
+tipo VARCHAR NOT NULL,
+valor INT NOT NULL,
+
+PRIMARY KEY (id) 
+);
+
+-----------------------------------------------
+
 CREATE TABLE cursos (
 id INT(5) AUTO_INCREMENT NOT NULL,
 nome VARCHAR(250) NOT NULL,
-mensalidade_id INT NOT NULL,
+precificacao_id INT NOT NULL,
 duracao DATE NOT NULL,
 
 PRIMARY KEY (id),
-FOREIGN KEY (mensalidade_id) REFERENCES mensalidades (id)
+FOREIGN KEY (precificacao_id) REFERENCES precificacao (id)
 );
 
 -----------------------------------------------
@@ -28,9 +38,10 @@ PRIMARY KEY (id)
 CREATE TABLE usuarios (
 id INT(5) AUTO_INCREMENT NOT NULL,
 nome VARCHAR(250) NOT NULL,
+is_admin TINYINT(1) NOT NULL DEFAULT 0,
 cpf VARCHAR(11) NOT NULL,
 email VARCHAR(250) NOT NULL,
-telefone INT NOT NULL,
+telefone BIGINT NOT NULL,
 mensalidade_id INT NOT NULL,
 
 PRIMARY KEY (id),
@@ -55,7 +66,7 @@ FOREIGN KEY (curso_id) REFERENCES cursos (id)
 CREATE TABLE aulas(
 id INT AUTO_INCREMENT NOT NULL,
 curso_id INT NOT NULL,
-titulo VARCHAR NOT NULL,
+titulo VARCHAR(250) NOT NULL,
 descricao VARCHAR(250) NOT NULL,
 video_url VARCHAR(250) NOT NULL,
 
@@ -69,13 +80,13 @@ id INT AUTO_INCREMENT NOT NULL,
 usuario_id INT NOT NULL,
 curso_id INT NOT NULL,
 nota INT(2) NOT NULL,
-comentario VARHCAR(250) NOT NULL,
+comentario VARCHAR(250) NOT NULL,
 data DATE NOT NULL,
 horario_inicio INT NOT NULL,
 horario_fim INT NOT NULL,
 
 PRIMARY KEY (id),
-FOREIGN KEY (usuario_id) REFERENCES usuario (id),
+FOREIGN KEY (usuario_id) REFERENCES usuarios (id),
 FOREIGN KEY (curso_id) REFERENCES cursos (id)
 );
 
