@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="appUtrial">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -19,7 +19,6 @@
         <link rel="stylesheet" href="<?php echo base_url('public/plugins/perfect-scrollbar/css/perfect-scrollbar.css');?>">
         
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="public/dist/js/theme.js"></script>
         <link rel="stylesheet" href="<?php echo base_url('public/dist/css/theme.min.css');?>">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -33,7 +32,7 @@
             <?php endforeach; ?>
 
         <?php endif; ?>
-        
+
     </head>
 
     <body>

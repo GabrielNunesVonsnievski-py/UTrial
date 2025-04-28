@@ -26,6 +26,8 @@ class Cursos extends CI_Controller{
 			),
 			
 		);
+
+		$datavalor['valor']
 		
 		$this->load->view('layout/header', $data);
 		$this->load->view('cursos/index');

@@ -1,11 +1,11 @@
 <?php $this->load->view('layout/navbar');?>
 
-<div class="page-wrap">
+<div class="page-wrap" ng-controller="alunosController">
 
     <?php  $this->load->view('layout/sidebar'); ?>
 
     <div class="main-content">
-        <div class="container-fluid">
+    <div class="container-fluid">
 
             <div class="page-header">
                 <div class="row align-items-end">
@@ -32,18 +32,20 @@
                                     <th class="text-left">Nome</th>
                                     <th class="text-center">CPF</th>
                                     <th class="text-center">E-mail</th>
+                                    <th class="text-center">ID Mensalidade</th>
                                     <th class="text-center" width="15%">Opções</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- <tr ng-show="listaALunos.length == 0">
+                                <tr ng-show="getListaAlunos.length == 0">
                                     <td class="text-center" colspan="7">Nenhum registro encontrado.</td>
-                                </tr> -->
-                                <tr dir-paginate="i in listaInscricoes | filter: pesquisar | itemsPerPage: 10">
+                                </tr> 
+                                <tr dir-paginate="i in getListaAlunos | filter: pesquisar | itemsPerPage: 10">
                                     <td class="text-center">{{ i.id }}</td>
                                     <td class="name text-left">{{ i.nome | uppercase }}</td>
                                     <td class="text-center">{{ i.cpf }}</td>
                                     <td class="text-center">{{ i.email }}</td>
+                                    <td class="text-center">{{ i.mensalidade_id }}</td>
                                     <td class="text-center">
                                         <button class="butNew2" title="Editar E-mail" ng-click="modalNovoEmail(i)">
                                             <span class=""><i class="fa-solid fa-square-envelope"></i></span>
@@ -62,7 +64,7 @@
                     </div>
                 </div>
             </div>
-
+            <?php var_dump($getListaAlunos); ?>
         </div>
     </div>
 
@@ -73,6 +75,16 @@
         </div>
     </footer>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-utils-pagination/0.11.1/dirPagination.js"></script>
+
+<script>
+    window.listaAlunos = <?php echo json_encode($getListaAlunos); ?>;
+</script>
+
+<script src="<?php echo base_url('application/views/alunos/controller/alunosController.js'); ?>"></script>
 
 <style>
 

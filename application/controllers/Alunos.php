@@ -5,6 +5,9 @@ class Alunos extends CI_Controller{
 
     public function __construct(){
 		parent:: __construct();
+
+		$this->load->model('Alunos_model');
+
 	}
 	
 	public function index()
@@ -24,11 +27,12 @@ class Alunos extends CI_Controller{
                 'plugins/datatables.net/js/traducaodatatables.js',
                 'dist/js/util.js',
 			),
-			
+
+			'getListaAlunos' => $this->Alunos_model->getListaAlunos(),
 		);
 		
 		$this->load->view('layout/header', $data);
-		$this->load->view('alunos/index');
+		$this->load->view('alunos/index', $data);
 		$this->load->view('layout/footer');
 
 	}
