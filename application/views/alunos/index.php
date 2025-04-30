@@ -37,10 +37,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-show="getListaAlunos.length == 0">
+                                <tr ng-show="ListaAlunos.length == 0">
                                     <td class="text-center" colspan="7">Nenhum registro encontrado.</td>
                                 </tr> 
-                                <tr dir-paginate="i in getListaAlunos | filter: pesquisar | itemsPerPage: 10">
+                                <tr dir-paginate="i in ListaAlunos | filter: pesquisar | itemsPerPage: 10">
                                     <td class="text-center">{{ i.id }}</td>
                                     <td class="name text-left">{{ i.nome | uppercase }}</td>
                                     <td class="text-center">{{ i.cpf }}</td>
@@ -80,11 +80,11 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-utils-pagination/0.11.1/dirPagination.js"></script>
 
-<script>
-    window.listaAlunos = <?php echo json_encode($getListaAlunos); ?>;
-</script>
-
 <script src="<?php echo base_url('application/views/alunos/controller/alunosController.js'); ?>"></script>
+
+<script>
+    window.getlistaAlunos = <?php echo json_encode($getListaAlunos); ?>;
+</script>
 
 <style>
 

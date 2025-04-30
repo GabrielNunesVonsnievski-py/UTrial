@@ -1,3 +1,5 @@
-angular.module('appUtrial', ['angularUtils.directives.dirPagination']).controller('alunosController', function($scope) {
-    $scope.getListaAlunos = window.listaAlunos || [];
+var app = angular.module('utrialApp', ['angularUtils.directives.dirPagination']);
+
+app.controller('alunosController', function($scope) {
+    $scope.getListaAlunos = window.getListaAlunos || [];
 });

@@ -11,9 +11,7 @@ class Cursos_model extends CI_Model{
     
     public function getListaCursos(){
 
-        $preco = $this->utrial->get('valor');
-        $duracao = $this->utrial->get('duracao');
-        
-        return $title->result();
+        $cursos = $this->utrial->get('cursos');
+        return $cursos->result();
     }
 }

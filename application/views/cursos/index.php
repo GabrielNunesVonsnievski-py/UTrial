@@ -49,8 +49,8 @@
                                         </div>
                                         <div class="row align-items-center text-center">
                                             <div class="col">
-                                                <span>Livre</span>
-                                                <h6 class="mb-0 badge badge-pill badge-navy text-dark"><?php ?></h6>
+                                                <span>Valor</span>
+                                                <h6 class="mb-0 badge badge-pill badge-navy"><?php ?></h6>
                                             </div>
                                             <div class="col"><i class="fas fa-exchange-alt  f-18"></i></div>
                                             <div class="col">
@@ -272,6 +272,16 @@
                         
                             <!-- PRECIFICACAO DOS CURSOS -->
                         
+                            <tbody>
+                                <tr>
+                                    <?php foreach ($cursos as $curso) { ?>
+                                    <tr><?php echo $curso->nome ?></tr>
+                                    <tr><?php echo $curso->valor ?></tr>
+                                    <tr><?php echo $curso->duracao ?></tr>
+                                    <?php } ?>
+                                </tr>                                
+                            </tbody>
+                            
                         </div>
                     </div>
                 </div>

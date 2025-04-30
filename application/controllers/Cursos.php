@@ -4,11 +4,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Cursos extends CI_Controller{
 
     public function __construct(){
-		parent:: __construct();
+		parent:: __construct();		
+
+		$this->load->model('Cursos_model');
+		
 	}
 	
 	public function index()
 	{
+		$datacursos['cursos'] = $this->Cursos_model->getListaCursos();
+		
 		$data = array(
 			'titulo' => 'Utrial | Cursos',
 			'sub_titulo' => 'Veja todos os nossos cursos',
@@ -24,13 +29,12 @@ class Cursos extends CI_Controller{
                 'plugins/datatables.net/js/traducaodatatables.js',
                 'dist/js/util.js',
 			),
-			
+
 		);
 
-		$datavalor['valor']
 		
 		$this->load->view('layout/header', $data);
-		$this->load->view('cursos/index');
+		$this->load->view('cursos/index', $datacursos);
 		$this->load->view('layout/footer');
 
 	}
