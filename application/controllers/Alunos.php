@@ -28,7 +28,7 @@ class Alunos extends CI_Controller{
                 'dist/js/util.js',
 			),
 
-			'getListaAlunos' => $this->Alunos_model->getListaAlunos(),
+			'getListaAlunos' => $this->Alunos_model->getListaAlunos()
 		);
 
 		$this->load->view('layout/header', $data);
