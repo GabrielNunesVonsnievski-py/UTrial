@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Login - Utrial</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    
+
 </head>
 <body>
 
@@ -15,21 +15,23 @@
 
     <div class="right-side" style="background-color:rgb(37, 41, 46);">
         <form class="login-form" method="post" action="processa_login.php">
-            <h2>Bem-vindo!</h2>
-            <div class="form-group">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
-            </div>
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
-            </div>
-            <button type="submit" class="btn-login">Entrar</button>
-            <br>
-            <br>
+            <h1 class="text-center">Bem-vindo!</h1>
+
+            <form method="POST" action="<?php echo base_url('login/auth'); ?>">
+                <div class="form-group">
+                    <span for="email">E-mail:</span>
+                    <input type="email" name="email" required placeholder="Digite seu e-mail" value="" class="form-control">
+                    <br>
+                    <label for="senha">Senha:</label>
+                        <input type="password" name="password" required placeholder="Digite sua senha" value="" class="form-control"></input>
+                        <br>
+                    <button type="submit" class="btn-theme btn-login">Entrar</button>
+                </div>
+                <br>
+                <br>
             <div class="btnCadastro text-center">
                 <a href="<?php echo base_url('cadastro'); ?>" class="btnText">Não tem conta? Cadastrar-se!</a>
-            </div> 
+            </div>
         </form>
     </div>
 </div>
@@ -49,7 +51,7 @@
         .btnText{
             color: white;
         }
-        
+
         .logo{
             width: 625px;
             height: 625px;
@@ -64,7 +66,7 @@
             transition: background 0.2s;
 
         }
-            
+
         body, html {
             height: 100%;
             width: 100%;
@@ -114,8 +116,7 @@
         }
         .btn-login {
             width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
+            padding: 5px;
             color: white;
             border: none;
             border-radius: 5px;
@@ -123,7 +124,9 @@
             cursor: pointer;
             transition: background 0.3s;
         }
-        .btn-login:hover {
-            background-color: #45a049;
+
+        .btn-login .hover
+        {
+            /* colocar o mesmo do botao saduiche da header */
         }
     </style>
