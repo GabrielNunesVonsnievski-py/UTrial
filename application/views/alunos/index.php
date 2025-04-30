@@ -1,6 +1,6 @@
 <?php $this->load->view('layout/navbar');?>
 
-<div class="page-wrap" ng-controller="alunosController">
+<div class="page-wrap" ng-app="utrialApp" ng-controller="alunosController">
 
     <?php  $this->load->view('layout/sidebar'); ?>
 
@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="card shadow-sm">
@@ -37,24 +37,22 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr ng-show="ListaAlunos.length == 0">
-                                    <td class="text-center" colspan="7">Nenhum registro encontrado.</td>
-                                </tr> 
-                                <tr dir-paginate="i in ListaAlunos | filter: pesquisar | itemsPerPage: 10">
-                                    <td class="text-center">{{ i.id }}</td>
-                                    <td class="name text-left">{{ i.nome | uppercase }}</td>
-                                    <td class="text-center">{{ i.cpf }}</td>
-                                    <td class="text-center">{{ i.email }}</td>
-                                    <td class="text-center">{{ i.mensalidade_id }}</td>
-                                    <td class="text-center">
-                                        <button class="butNew2" title="Editar E-mail" ng-click="modalNovoEmail(i)">
-                                            <span class=""><i class="fa-solid fa-square-envelope"></i></span>
-                                        </button>
-                                        <button class="butNew2" title="Gerar Nova Senha" ng-click="modalNovaSenha(i)">
-                                            <span class=""><i class="fa-solid fa-key"></i></span>
-                                        </button>
-                                    </td>
-                                </tr>
+                            <tr ng-repeat="i in getListaAlunos | filter: pesquisar">
+                                <td class="text-center">{{ i.id }}</td>
+                                <td class="name text-left">{{ i.nome | uppercase }}</td>
+                                <td class="text-center">{{ i.cpf }}</td>
+                                <td class="text-center">{{ i.email }}</td>
+                                <td class="text-center">{{ i.telefone }}</td>
+                                <td class="text-center">{{ i.mensalidade_id }}</td>
+                                <td class="text-center">
+                                    <button class="butNew2" title="Editar E-mail" ng-click="modalNovoEmail(i)">
+                                        <span><i class="fa-solid fa-square-envelope"></i></span>
+                                    </button>
+                                    <button class="butNew2" title="Gerar Nova Senha" ng-click="modalNovaSenha(i)">
+                                        <span><i class="fa-solid fa-key"></i></span>
+                                    </button>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                         </div>
@@ -77,10 +75,9 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-utils-pagination/0.11.1/dirPagination.js"></script>
-
 <script src="<?php echo base_url('application/views/alunos/controller/alunosController.js'); ?>"></script>
+
 
 <script>
     window.getlistaAlunos = <?php echo json_encode($getListaAlunos); ?>;

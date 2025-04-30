@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="#" style="text-center">
                 <a href="<?php echo base_url('/cursos'); ?>">
                     <button class="btn btn-dark btn-respirando">Cursos disponíveis</button>
@@ -69,9 +69,9 @@
 }
 
 @keyframes respirar {
-  0% { transform: scale(1); opacity: 0.7; }
-  50% { transform: scale(1.05); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.7; }
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 7; }
+  100% { transform: scale(1); opacity: 0.5; }
 }
 
 .btn-respirando {

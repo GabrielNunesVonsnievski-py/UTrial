@@ -1,7 +1,7 @@
 <!-- Sidebar -->
 <div class="app-sidebar bg-light">
     <div class="sidebar-header bg-dark">
-        <a class="header-brand" href="<?php echo base_url('/') ?>">
+        <a class="header-brand" href="<?php echo base_url('/home') ?>">
             <div class="logo-img">
                 <img src="public/img/Utrial_logo.png" class="header-brand-img" alt="logo do site utrial">
             </div>
@@ -10,7 +10,7 @@
 
     <div class="sidebar-content">
         <div class="nav-container">
-            <nav id="main-menu-navigation" class="navigation-main">                
+            <nav id="main-menu-navigation" class="navigation-main">
 
                 <div class="nav-lavel bg-dark text-white"><strong>CURSOS</strong></div>
 
@@ -47,7 +47,7 @@
                     <a href=""><i class="fa-brands fa-mdb f-15"></i> Mongo DB</a>
                     <a href=""><i class="fa-solid fa-fire"></i> Fire Base</a>
                 </div>
-                
+
                 <!-- OUTROS -->
                 <div class="nav-item dropdown-toggle text-white" onclick="toggleDropdown('outros')">
                     <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-square-caret-down"></i>Outros</div>
@@ -76,7 +76,7 @@
                     <a href="#" class="painel-item"><i class="fa-solid fa-clock"></i> Horários</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-newspaper"></i> Avaliações</a>
                 </div>
-                
+
             </nav>
         </div>
     </div>
@@ -124,7 +124,7 @@
 }
 
 .dropdown-content.show {
-    max-height: 500px; 
+    max-height: 500px;
 }
 
 .dropdown-content a {
@@ -158,4 +158,4 @@
     }
 </script>
 
-    
+
