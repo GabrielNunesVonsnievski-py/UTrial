@@ -10,8 +10,6 @@ class Alunos_model extends CI_Model{
 
     public function getListaAlunos(){
 
-    $alunos = $this->utrial->get('usuarios');
-    return $alunos->result();
-
+        return $this->db->get('usuarios')->result_array();
     }
 }

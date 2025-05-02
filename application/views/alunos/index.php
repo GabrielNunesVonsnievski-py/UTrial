@@ -1,70 +1,61 @@
-<?php $this->load->view('layout/navbar');?>
-
-<div class="page-wrap" ng-app="utrialApp" ng-controller="alunosController">
-
-    <?php  $this->load->view('layout/sidebar'); ?>
-
+<?php $this->load->view('layout/navbar'); ?>
+<div class="page-wrap">
+    <?php $this->load->view('layout/sidebar'); ?>
     <div class="main-content">
-    <div class="container-fluid">
-
+        <div class="container-fluid">
             <div class="page-header">
-                <div class="row align-items-end">
-                    <div class="col-lg-8">
-                        <div class="page-header-title">
-                            <i class="<?php echo $icone_view ?> bg-dark"></i>
-                            <div class="d-inline">
-                                <h5><?php echo $titulo ?></h5>
-                                <span><?php echo $sub_titulo; ?></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h5><?php echo $titulo; ?></h5>
+                <span><?php echo $sub_titulo; ?></span>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card shadow-sm">
-                        <div class="card-header d-block text-center">
-                        <table class="tabTutor table-striped table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th class="text-left">Nome</th>
-                                    <th class="text-center">CPF</th>
-                                    <th class="text-center">E-mail</th>
-                                    <th class="text-center">ID Mensalidade</th>
-                                    <th class="text-center" width="15%">Opções</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tr ng-repeat="i in getListaAlunos | filter: pesquisar">
-                                <td class="text-center">{{ i.id }}</td>
-                                <td class="name text-left">{{ i.nome | uppercase }}</td>
-                                <td class="text-center">{{ i.cpf }}</td>
-                                <td class="text-center">{{ i.email }}</td>
-                                <td class="text-center">{{ i.telefone }}</td>
-                                <td class="text-center">{{ i.mensalidade_id }}</td>
-                                <td class="text-center">
-                                    <button class="butNew2" title="Editar E-mail" ng-click="modalNovoEmail(i)">
-                                        <span><i class="fa-solid fa-square-envelope"></i></span>
-                                    </button>
-                                    <button class="butNew2" title="Gerar Nova Senha" ng-click="modalNovaSenha(i)">
-                                        <span><i class="fa-solid fa-key"></i></span>
-                                    </button>
-                                </td>
+            <div class="card shadow-sm">
+                <div class="card-header text-center">
+                    <h5>Alunos Cadastrados</h5>
+                </div>
+                <div class="card-body">
+                    <table class="tabTutor table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center">#</th>
+                                <th class="text-left">Nome</th>
+                                <th class="text-center">CPF</th>
+                                <th class="text-center">E-mail</th>
+                                <th class="text-center">Telefone</th>
+                                <th class="text-center">ID Mensalidade</th>
+                                <th class="text-center">Opções</th>
                             </tr>
-                            </tbody>
-                        </table>
-                        </div>
-                        <div class="card-body">
-
-                        </div>
-                    </div>
+                        </thead>
+                        <tbody>
+                        <?php if (!empty($getListaAlunos)): ?>
+                            <?php foreach ($getListaAlunos as $aluno): ?>
+                                <tr>
+                                    <td class="text-center"><?php echo $aluno['id']; ?></td>
+                                    <td class="text-left"><?php echo strtoupper($aluno['nome']); ?></td>
+                                    <td class="text-center"><?php echo $aluno['cpf']; ?></td>
+                                    <td class="text-center"><?php echo $aluno['email']; ?></td>
+                                    <td class="text-center"><?php echo $aluno['telefone']; ?></td>
+                                    <td class="text-center"><?php echo $aluno['mensalidade_id']; ?></td>
+                                    <td class="text-center">
+                                        <button class="butNew2" title="Editar E-mail">
+                                            <i class="fa-solid fa-square-envelope"></i>
+                                        </button>
+                                        <button class="butNew2" title="Gerar Nova Senha">
+                                            <i class="fa-solid fa-key"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <tr><td colspan="7" class="text-center">Nenhum aluno cadastrado.</td></tr>
+                        <?php endif; ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <?php var_dump($getListaAlunos); ?>
         </div>
     </div>
+</div>
+
 
     <footer class="footer">
         <div class="w-100 clearfix">

@@ -14,7 +14,7 @@ class Alunos extends CI_Controller{
 	{
 		$data = array(
 			'titulo' => 'Utrial | Alunos',
-			'sub_titulo' => 'Gerencie seus alunos',
+			'sub_titulo' => 'Lista de alunos',
 			'icone_view' => 'fas fa-users',
 			'styles' => array(
 				'plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css',
@@ -27,9 +27,9 @@ class Alunos extends CI_Controller{
                 'plugins/datatables.net/js/traducaodatatables.js',
                 'dist/js/util.js',
 			),
-
-			'getListaAlunos' => $this->Alunos_model->getListaAlunos()
 		);
+
+		$data['getListaAlunos'] = $this->Alunos_model->getListaAlunos();
 
 		$this->load->view('layout/header', $data);
 		$this->load->view('alunos/index', $data);
