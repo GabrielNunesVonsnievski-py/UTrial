@@ -20,16 +20,28 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="card shadow-sm">
                         <div class="card-header d-block text-center">
-                            <strong>algum texto importante</strong>
+                            <strong>CADASTRAR ALUNOS</strong>
                         </div>
                         <div class="card-body">
-
+                        <form class="form-control">
+                            <span>Nome: </span>
+                            <input type="text" placeholder="Cleber BamBam">
+                            <span>CPF: </span>
+                            <input type="text" placeholder="0000.0000-00">
+                            <span>E-mail: </span>
+                            <input type="text" placeholder="cleber@gmail.com">
+                            <span>E-mail: </span>
+                            <input type="text" placeholder="cleber@gmail.com">
+                            <span>E-mail: </span>
+                            <input type="text" placeholder="cleber@gmail.com">
                         </div>
+                        </form>
+
                     </div>
                 </div>
             </div>
