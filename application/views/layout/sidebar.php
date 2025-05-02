@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<div class="app-sidebar bg-light">
+<div class="app-sidebar bg-dark">
     <div class="sidebar-header bg-dark">
         <a class="header-brand" href="<?php echo base_url('/home') ?>">
             <div class="logo-img">
@@ -12,11 +12,11 @@
         <div class="nav-container">
             <nav id="main-menu-navigation" class="navigation-main">
 
-                <div class="nav-lavel bg-dark text-white"><strong>CURSOS</strong></div>
+                <div class="nav-lavel text-white" style="background-color: #495057;"><strong>CURSOS</strong></div>
 
                 <!-- FRONT-END -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('frontend')">
-                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-square-caret-down"></i>Front-End</div>
+                    <div class="painel-item nav-lavel bg-dark text-white"><i class="fa-regular fa-square-caret-down"></i>Front-End</div>
                 </div>
                 <div id="frontend" class="dropdown-content">
                     <a href=""><i class="fa-brands fa-html5"></i> HTML</a>
@@ -60,7 +60,7 @@
                 </div>
 
                 <!-- MEU PAINEL -->
-                <div class="nav-label bg-dark  text-white p-2"><strong>MEU PAINEL</strong></div>
+                <div class="nav-label text-white p-2"><strong>MEU PAINEL</strong></div>
                 <div class="painel-links p-2 text-center">
                     <a href="#" class="painel-item"><i class="fa-solid fa-bookmark"></i> Meus Cursos</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-hand-holding-dollar"></i> Minhas Mensalidades</a>
@@ -69,7 +69,7 @@
                 </div>
 
                 <!-- ADMIN -->
-                <div class="nav-label bg-dark text-white p-2"><strong>ADMINISTRÇÃO</strong></div>
+                <div class="nav-label text-white p-2"><strong>ADMINISTRÇÃO</strong></div>
                 <div class="painel-links p-2 text-center">
                     <a href="<?php echo base_url('/alunos');?>" class="painel-item"><i class="nav-item fa-solid fa-users"></i> Alunos</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-book-open"></i> Aulas</a>
@@ -85,6 +85,14 @@
 
 
 <style>
+
+.nav-label{
+    background-color: #495057;
+}
+
+.sidebar-content::-webkit-scrollbar {
+    display: none;
+}
 
 .painel-links {
     display: flex;
@@ -106,6 +114,7 @@
 
 .painel-item:hover {
     background-color: #495057;
+    color: white;
     text-decoration: none;
 }
 
@@ -129,7 +138,7 @@
 
 .dropdown-content a {
     padding: 5px 0;
-    color: #333;
+    color: #FFFFFF;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -142,11 +151,11 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #000;
+    color: #FFFFFF;
 }
 
 .dropdown-toggle:hover {
-    background-color:rgb(214, 214, 214);
+    background-color: #495057;
 }
 
 </style>

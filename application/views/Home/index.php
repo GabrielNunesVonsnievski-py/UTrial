@@ -65,7 +65,7 @@
 .btn{
     height: 30px;
     width: 150px;
-    box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.47);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.47);
 }
 
 @keyframes respirar {

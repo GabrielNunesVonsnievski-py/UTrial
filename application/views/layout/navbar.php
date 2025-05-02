@@ -10,7 +10,7 @@
                     </div>
                 </div>
             </div>
-                                    
+
             <div class="top-menu d-flex align-items-center">
                 <button type="button"  id="apps_modal_btn" data-toggle="modal" data-target="#appsModal" class="btn-icon"><i class="fa-solid fa-bars text-white f-20"></i></button>
                 <div class="dropdown">
@@ -33,10 +33,15 @@
     outline: none;
     padding: 0;
     margin: 0;
-}   
+}
 
 .btn-icon:hover {
     transform: scale(1.5);
 }
-    
+
+.header-dropdown-toggle:hover{
+    transform: scale(1.5);
+
+}
+
 </style>
