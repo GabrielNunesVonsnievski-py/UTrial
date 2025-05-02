@@ -16,7 +16,7 @@
 
                 <!-- FRONT-END -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('frontend')">
-                    <div class="painel-item nav-lavel bg-dark text-white"><i class="fa-regular fa-square-caret-down"></i>Front-End</div>
+                    <div class="painel-item nav-lavel bg-dark text-white"><i class="fa-solid fa-caret-down"></i>Front-End</div>
                 </div>
                 <div id="frontend" class="dropdown-content">
                     <a href=""><i class="fa-brands fa-html5"></i> HTML</a>
@@ -28,7 +28,7 @@
 
                 <!-- BACK-END -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('backend')">
-                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-square-caret-down"></i> Back-End</div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-solid fa-caret-down"></i> Back-End</div>
                 </div>
                 <div id="backend" class="dropdown-content">
                     <a href=""><i class="fa-brands fa-php"></i> PHP</a>
@@ -40,7 +40,7 @@
 
                 <!-- BANCO DE DADOS -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('Banco de dados')">
-                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-square-caret-down"></i>Banco de dados</div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-solid fa-caret-down"></i> Banco de dados</div>
                 </div>
                 <div id="Banco de dados" class="dropdown-content">
                     <a href=""><i class="fa-solid fa-database"></i> SQL</a>
@@ -50,7 +50,7 @@
 
                 <!-- OUTROS -->
                 <div class="nav-item dropdown-toggle text-white" onclick="toggleDropdown('outros')">
-                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-regular fa-square-caret-down"></i>Outros</div>
+                    <div class="painel-item nav-lavel bg-dark text-center text-white"><i class="fa-solid fa-caret-down"></i> Outros</div>
                 </div>
                 <div id="outros" class="dropdown-content ">
                     <a href=""  ><i class="fa-solid fa-brain"></i> IA</a>
@@ -69,7 +69,7 @@
                 </div>
 
                 <!-- ADMIN -->
-                <div class="nav-label text-white p-2"><strong>ADMINISTRÇÃO</strong></div>
+                <div class="nav-label text-white p-2"><strong>ADMINISTRAÇÃO</strong></div>
                 <div class="painel-links p-2 text-center">
                     <a href="<?php echo base_url('/alunos');?>" class="painel-item"><i class="nav-item fa-solid fa-users"></i> Alunos</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-book-open"></i> Aulas</a>
@@ -85,6 +85,10 @@
 
 
 <style>
+
+.item:hover{
+    background-color:rgb(255, 255, 255);
+}
 
 .nav-label{
     background-color: #495057;
@@ -127,9 +131,9 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
-    padding-left: 20px;
     display: flex;
     flex-direction: column;
+    /* padding-left: 20px;  <== REMOVER ESSA LINHA */
 }
 
 .dropdown-content.show {
@@ -137,12 +141,22 @@
 }
 
 .dropdown-content a {
-    padding: 5px 0;
+    padding: 10px 20px; /* padding interno horizontal */
     color: #FFFFFF;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #495057;
+}
+
+.dropdown-content :hover{
+    background-color: #495057;
 }
 
 .dropdown-toggle {

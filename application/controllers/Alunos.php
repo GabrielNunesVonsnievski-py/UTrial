@@ -32,7 +32,7 @@ class Alunos extends CI_Controller{
 		$data['getListaAlunos'] = $this->Alunos_model->getListaAlunos();
 
 		$this->load->view('layout/header', $data);
-		$this->load->view('alunos/index', $data);
+		$this->load->view('alunos/index');
 		$this->load->view('layout/footer');
 
 	}

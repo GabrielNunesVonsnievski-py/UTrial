@@ -1,17 +1,34 @@
-<?php $this->load->view('layout/navbar'); ?>
-<div class="page-wrap">
-    <?php $this->load->view('layout/sidebar'); ?>
+<?php $this->load->view('layout/navbar');?>
+
+<div class="page-wrap" ng-app="utrialApp" ng-controller="alunos_Controller">
+
+    <?php  $this->load->view('layout/sidebar'); ?>
+
     <div class="main-content">
-        <div class="container-fluid">
+    <div class="container-fluid">
+
             <div class="page-header">
-                <h5><?php echo $titulo; ?></h5>
-                <span><?php echo $sub_titulo; ?></span>
+                <div class="row align-items-end">
+                    <div class="col-lg-8">
+                        <div class="page-header-title">
+                            <i class="<?php echo $icone_view ?> bg-dark"></i>
+                            <div class="d-inline">
+                                <h5><?php echo $titulo ?></h5>
+                                <span><?php echo $sub_titulo; ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="card shadow-sm">
-                <div class="card-header text-center">
-                    <h5>Alunos Cadastrados</h5>
-                </div>
+            <div class="card-header d-block text-right">
+                <table>
+                    <div class="#" style="text-center">
+                        <a href="<?php echo base_url('alunos/core'); ?>">
+                            <button class="btn btn-dark btn-respirando">Cadastrar Alunos</button>
+                        </a>
+                    </div>
+                </table>
                 <div class="card-body">
                     <table class="tabTutor table-striped table-hover">
                         <thead>
@@ -22,11 +39,13 @@
                                 <th class="text-center">E-mail</th>
                                 <th class="text-center">Telefone</th>
                                 <th class="text-center">ID Mensalidade</th>
-                                <th class="text-center">Opções</th>
+                                <th class="text-center">Senha</th>
+                                <th class="text-center">Editar</th>
+                                <th class="text-center">Excluir</th>
                             </tr>
                         </thead>
-                        <tbody>
-                        <?php if (!empty($getListaAlunos)): ?>
+                        <tbody >
+                        <?php if (!empty($getListaAlunos)):?>
                             <?php foreach ($getListaAlunos as $aluno): ?>
                                 <tr>
                                     <td class="text-center"><?php echo $aluno['id']; ?></td>
@@ -35,12 +54,15 @@
                                     <td class="text-center"><?php echo $aluno['email']; ?></td>
                                     <td class="text-center"><?php echo $aluno['telefone']; ?></td>
                                     <td class="text-center"><?php echo $aluno['mensalidade_id']; ?></td>
+                                    <td class="text-center"><?php echo $aluno['senha']; ?></td>
                                     <td class="text-center">
-                                        <button class="butNew2" title="Editar E-mail">
-                                            <i class="fa-solid fa-square-envelope"></i>
+                                        <button class="butNew2" title="Editar Aluno" ng-click="openModalEditarAlunos($getListaAlunos)">
+                                            <i class="fa-solid fa-pen-to-square"></i>
                                         </button>
-                                        <button class="butNew2" title="Gerar Nova Senha">
-                                            <i class="fa-solid fa-key"></i>
+                                    </td>
+                                    <td>
+                                        <button class="butNew2" title="Excluir Aluno" ng-click="confirmarExcluirAluno">
+                                            <i class="fa-solid fa-trash"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -54,8 +76,6 @@
             </div>
         </div>
     </div>
-</div>
-
 
     <footer class="footer">
         <div class="w-100 clearfix">
@@ -69,23 +89,28 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-utils-pagination/0.11.1/dirPagination.js"></script>
 <script src="<?php echo base_url('application/views/alunos/controller/alunosController.js'); ?>"></script>
 
-
-<script>
-    window.getlistaAlunos = <?php echo json_encode($getListaAlunos); ?>;
-</script>
-
 <style>
+
+.card-header{
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px;
+}
 
 .tabTutor {
     border-collapse: collapse;
     width: 100%;
-}
-.tabTutor td {
     border: 1px solid #dedede;
     text-align: center;
     padding: 14px 20px;
     vertical-align: middle;
-    transition: 0.5s;
+    background-color: #f5f5f5; 
+}
+.tabTutor td {
+    border: 1px solid #dedede;
+    text-align: center;
+    padding: 15px 15px;
+    vertical-align: middle;
+    transition: 1.0s;
 }
 .tabTutor .name {
     font-size: 15px;
@@ -155,4 +180,15 @@
     background: linear-gradient(to bottom, #F2F2F2 0%,#E9E9E9 10%,#d1d1d1 51%,#fefefe 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2F2F2', endColorstr='#fefefe',GradientType=0 );
 }
+
+@keyframes respirar {
+  0% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.05); opacity: 1.2; }
+  100% { transform: scale(1); opacity: 0.6; }
+}
+
+.btn-respirando {
+  animation: respirar 2s infinite ease-in-out;
+}
+
 </style>
