@@ -21,4 +21,8 @@ class Alunos_model extends CI_Model{
         return $this->utrial->get_where('usuarios', ['email' => $email])->row();
     }
 
+    public function deletar($id){
+        return $this->utrial->delete('usuarios', ['id' => $id]);
+    }
+
 }
