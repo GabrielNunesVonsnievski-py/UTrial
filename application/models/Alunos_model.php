@@ -10,6 +10,15 @@ class Alunos_model extends CI_Model{
 
     public function getListaAlunos(){
 
-        return $this->db->get('usuarios')->result_array();
+        return $this->utrial->get('usuarios')->result_array();
     }
+
+    public function insert($data){
+        return $this->utrial->insert('usuarios', $data);
+    }
+
+    public function get_user_by_email($email){
+        return $this->utrial->get_where('usuarios', ['email' => $email])->row();
+    }
+
 }

@@ -24,11 +24,11 @@
             <div class="row justify-content-center">
                 <div class="col-md-12 text-center">
                     <div class="card">
-                        <div class="card-header d-block text-center">
+                        <div class="card-header d-block text-center bg-dark text-white">
                             <strong style="font-size: 20px;">EDITAR ALUNO</strong>
-
+                        </div>
                             <div class="card-body">
-                                <form action="" method="POST">
+                                <form action=" " method="POST">
                                     <div class="row g-3">
 
                                         <div class="col-md-12">
@@ -68,7 +68,6 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>

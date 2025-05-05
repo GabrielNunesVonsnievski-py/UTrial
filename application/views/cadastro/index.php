@@ -14,7 +14,7 @@
     </div>
 
     <div class="right-side">
-      <form class="login-form" method="post" action="<?php echo base_url('cadastro/processa'); ?>">
+      <form class="login-form" method="post" action="<?= base_url('Auth/register') ?>">
         <h2>Crie sua conta</h2>
 
         <div class="form-group">
@@ -24,7 +24,7 @@
 
         <div class="form-group">
           <label for="cpf">CPF:</label>
-          <input type="text" id="cpf" name="cpf" required placeholder="Digite seu CPF">
+          <input type="text" id="cpf" name="CPF" required placeholder="Digite seu CPF">
         </div>
 
         <div class="form-group">
@@ -40,6 +40,14 @@
         <div class="form-group">
           <label for="senha">Senha:</label>
           <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+        </div>
+
+        <div class="form-group">
+          <select name="mensalidade" class="form-control" required>
+            <option value="" disabled selected>Selecione uma opção de mensalidade</option>
+            <option value="2">Anual</option>
+            <option value="1">Mensal</option>
+          </select>
         </div>
 
         <button type="submit" class="btn-login">Cadastrar-se</button>
@@ -113,11 +121,11 @@
     .login-form h2 {
       font-size: 26px;
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 5px;
     }
 
     .form-group {
-      margin-bottom: 16px;
+      margin-bottom: 5px;
     }
 
     .form-group label {
@@ -132,6 +140,7 @@
       border-radius: 6px;
       border: none;
       font-size: 14px;
+      color: black;
     }
 
     .btn-login {
@@ -161,7 +170,4 @@
       font-size: 14px;
     }
 
-    .btnCadastro a:hover {
-      color: #aaa;
-    }
   </style>

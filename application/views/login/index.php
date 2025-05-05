@@ -28,7 +28,7 @@
       <img src="<?php echo base_url('public/src/img/UTrial_logo_ofc_png.png'); ?>" alt="Logo Utrial">
     </div>
     <div class="right-side">
-      <form class="login-form" method="POST" action="<?php echo base_url('login/Auth'); ?>">
+      <form class="login-form" method="POST" action="<?= base_url('Auth/login'); ?>">
         <h1>Bem-vindo!</h1>
 
         <div class="form-group">

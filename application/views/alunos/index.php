@@ -21,9 +21,11 @@
                 </div>
             </div>
 
-            <div class="card-header d-block text-right">
-                <div class="card-body">
-                    <table class="tabTutor table-striped table-hover">
+
+            <div>
+                <table class="tabTutor table-striped table-hover">
+                    <div class="card-header bg-dark d-block text-center text-white">
+                        <strong style="font-size: 20px;">LISTA DE ALUNOS</strong>
                         <thead>
                             <tr>
                                 <th class="text-center">#</th>
@@ -66,8 +68,8 @@
                             <tr><td colspan="7" class="text-center">Nenhum aluno cadastrado.</td></tr>
                         <?php endif; ?>
                         </tbody>
-                    </table>
-                </div>
+                    </div>
+                </table>
             </div>
         </div>
     </div>
@@ -87,7 +89,7 @@
 <style>
 
 .card-header{
-    border-radius: 10px;
+    border-radius: 10px 10px;
     box-shadow: 2px 2px 20px;
 }
 
