@@ -20,9 +20,4 @@ class Login extends CI_Controller {
 
 	}
 
-    public function logout(){
-        $this->ion_auth->logout();
-        redirect($this->router->fetch_class());
-
-    }
 }

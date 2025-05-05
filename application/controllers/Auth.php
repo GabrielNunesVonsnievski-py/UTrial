@@ -49,8 +49,8 @@ class Auth extends CI_Controller {
         if($user && password_verify($senha, $user->senha)){
             //login com sucesso
             $this->session->set_userdata([
-                'user_id' =>$user->id,
-                'user_nome' =>$user->id,
+                'usuario_id' =>$user->id,
+                'nome' =>$user->nome,
                 'logado' =>TRUE
             ]);
             redirect('/home');
@@ -61,9 +61,9 @@ class Auth extends CI_Controller {
         }
     }
 
-    public function logout(){
-        $this->ion_auth->logout();
-        redirect($this->router->fetch_class());
-
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('Auth/login');
     }
 }
