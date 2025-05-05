@@ -1,6 +1,6 @@
 <?php $this->load->view('layout/navbar');?>
 
-<div class="page-wrap" ng-app="utrialApp" ng-controller="alunos_Controller">
+<div class="page-wrap">
 
     <?php  $this->load->view('layout/sidebar'); ?>
 
@@ -22,13 +22,6 @@
             </div>
 
             <div class="card-header d-block text-right">
-                <table>
-                    <div class="#" style="text-center">
-                        <a href="<?php echo base_url('alunos/core'); ?>">
-                            <button class="btn btn-dark btn-respirando">Cadastrar Alunos</button>
-                        </a>
-                    </div>
-                </table>
                 <div class="card-body">
                     <table class="tabTutor table-striped table-hover">
                         <thead>
@@ -56,9 +49,11 @@
                                     <td class="text-center"><?php echo $aluno['mensalidade_id']; ?></td>
                                     <td class="text-center"><?php echo $aluno['senha']; ?></td>
                                     <td class="text-center">
-                                        <button class="butNew2" title="Editar Aluno" ng-click="openModalEditarAlunos($getListaAlunos)">
-                                            <i class="fa-solid fa-pen-to-square"></i>
-                                        </button>
+                                        <a href="<?php echo base_url('alunos/core'); ?>">
+                                            <button class="butNew2" title="Editar Aluno" ng-click="<?php echo base_url('alunos/core'); ?>">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </button>
+                                        </a>
                                     </td>
                                     <td>
                                         <button class="butNew2" title="Excluir Aluno" ng-click="confirmarExcluirAluno">
@@ -103,7 +98,7 @@
     text-align: center;
     padding: 14px 20px;
     vertical-align: middle;
-    background-color: #f5f5f5; 
+    background-color: #f5f5f5;
 }
 .tabTutor td {
     border: 1px solid #dedede;
@@ -133,7 +128,8 @@
     border: 0px solid #b9b9b9;
     background-color: #646FAD;
 }
-.butNew {
+
+/* .butNew {
     padding: 8px 25px;
     border: none;
     border-radius: 2px;
@@ -151,7 +147,8 @@
     color: #fff;
     text-decoration: none!important;
     background-color: #69B759;
-}
+} */
+
 .butNew2 {
     padding: 5px 8px;
     border: none;
@@ -179,6 +176,7 @@
     background: -webkit-linear-gradient(top, #F2F2F2 0%,#E9E9E9 10%,#d1d1d1 51%,#fefefe 100%);
     background: linear-gradient(to bottom, #F2F2F2 0%,#E9E9E9 10%,#d1d1d1 51%,#fefefe 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2F2F2', endColorstr='#fefefe',GradientType=0 );
+    transform: scale(1.3);
 }
 
 @keyframes respirar {

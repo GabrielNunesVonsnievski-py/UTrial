@@ -39,9 +39,4 @@
     transform: scale(1.5);
 }
 
-.header-dropdown-toggle:hover{
-    transform: scale(1.5);
-
-}
-
 </style>

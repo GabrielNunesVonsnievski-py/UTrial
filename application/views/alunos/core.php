@@ -21,27 +21,54 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card shadow-sm">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <div class="card">
                         <div class="card-header d-block text-center">
-                            <strong>CADASTRAR ALUNOS</strong>
-                        </div>
-                        <div class="card-body">
-                        <form class="form-control">
-                            <span>Nome: </span>
-                            <input type="text" placeholder="Cleber BamBam">
-                            <span>CPF: </span>
-                            <input type="text" placeholder="0000.0000-00">
-                            <span>E-mail: </span>
-                            <input type="text" placeholder="cleber@gmail.com">
-                            <span>E-mail: </span>
-                            <input type="text" placeholder="cleber@gmail.com">
-                            <span>E-mail: </span>
-                            <input type="text" placeholder="cleber@gmail.com">
-                        </div>
-                        </form>
+                            <strong style="font-size: 20px;">EDITAR ALUNO</strong>
 
+                            <div class="card-body">
+                                <form action="" method="POST">
+                                    <div class="row g-3">
+
+                                        <div class="col-md-12">
+                                            <input name="nome" type="text" class="form-control" placeholder="Nome completo" required>
+                                        </div>
+
+                                        <div class="col-md-6 mt-3">
+                                            <input name="CPF" type="text" class="form-control" placeholder="CPF" required>
+                                        </div>
+
+                                        <div class="col-md-6 mt-3">
+                                            <input name="email" type="email" class="form-control" placeholder="Email" required>
+                                        </div>
+
+                                        <div class="col-md-6 mt-3">
+                                            <input name="telefone" type="text" class="form-control" placeholder="Telefone">
+                                        </div>
+
+                                        <div class="col-md-6 mt-3">
+                                            <input name="senha" type="password" class="form-control" placeholder="Senha">
+                                        </div>
+
+                                        <div class="col-md-12 mt-3">
+                                            <select name="mensalidade" class="form-control" required>
+                                                <option value="" disabled selected>Selecione uma opção de mensalidade</option>
+                                                <option value="anual">Anual</option>
+                                                <option value="mensal">Mensal</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12 text-center mt-3">
+                                            <button type="submit" class="btn btn-respirando btn-dark">
+                                                <i class="fa-solid fa-id-card"></i> &nbsp;Salvar
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,3 +83,22 @@
         </div>
     </footer>
 </div>
+
+<style>
+
+@keyframes respirar {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1.5; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.btn-respirando {
+  animation: respirar 2s infinite ease-in-out;
+}
+
+.card-header{
+    border-radius: 10px 10px;
+    box-shadow: 2px 2px 20px;
+}
+
+</style>

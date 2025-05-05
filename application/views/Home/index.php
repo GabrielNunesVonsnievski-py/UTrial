@@ -61,7 +61,7 @@
                 <div class="col-md-12">
                     <div class="card shadow-sm">
                         <div class="card-header d-block text-center">
-                            <strong>SOBRE NÓS</strong>
+                            <strong style="font-size: 20px;">SOBRE NÓS</strong>
                         </div>
                         <div class="card-body">
                             <p style="text-align: justify; font-size: 16px;">
