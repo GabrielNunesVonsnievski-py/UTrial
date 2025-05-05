@@ -36,7 +36,7 @@ class Auth extends CI_Controller {
 
         $this->Alunos_model->insert($data); //salva no banco
 
-        redirect('Auth/login');
+        redirect('login');
 
     }
 
@@ -48,17 +48,16 @@ class Auth extends CI_Controller {
 
         if($user && password_verify($senha, $user->senha)){
             //login com sucesso
-
             $this->session->set_userdata([
-                'id' =>$user->id,
-                'nome' =>$user->id,
+                'user_id' =>$user->id,
+                'user_nome' =>$user->id,
                 'logado' =>TRUE
             ]);
-            redirect('home'); //redirecionar para a pagina home
+            redirect('/home');
         }else {
             //falha ao logar
             $this->session->set_flashdata('erro', 'Email ou senha inválidos');
-            redirect('login');
+            redirect('/login');
         }
     }
 

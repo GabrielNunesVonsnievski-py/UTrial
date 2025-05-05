@@ -34,7 +34,6 @@
                                 <th class="text-center">E-mail</th>
                                 <th class="text-center">Telefone</th>
                                 <th class="text-center">ID Mensalidade</th>
-                                <th class="text-center">Senha</th>
                                 <th class="text-center">Editar</th>
                                 <th class="text-center">Excluir</th>
                             </tr>
@@ -49,7 +48,6 @@
                                     <td class="text-center"><?php echo $aluno['email']; ?></td>
                                     <td class="text-center"><?php echo $aluno['telefone']; ?></td>
                                     <td class="text-center"><?php echo $aluno['mensalidade_id']; ?></td>
-                                    <td class="text-center"><?php echo $aluno['senha']; ?></td>
                                     <td class="text-center">
                                         <a href="<?php echo base_url('alunos/core'); ?>">
                                             <button class="butNew2" title="Editar Aluno" ng-click="<?php echo base_url('alunos/core'); ?>">

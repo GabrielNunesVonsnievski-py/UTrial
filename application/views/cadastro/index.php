@@ -15,38 +15,38 @@
 
     <div class="right-side">
       <form class="login-form" method="post" action="<?= base_url('Auth/register') ?>">
-        <h2>Crie sua conta</h2>
+        <h2>Crie sua conta!</h2>
 
         <div class="form-group">
           <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+          <input type="text" id="nome" name="nome" required placeholder="ex: João Alberto">
         </div>
 
         <div class="form-group">
           <label for="cpf">CPF:</label>
-          <input type="text" id="cpf" name="CPF" required placeholder="Digite seu CPF">
+          <input type="text" id="cpf" name="CPF" required placeholder="ex: 000.000.000-00">
         </div>
 
         <div class="form-group">
           <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+          <input type="email" id="email" name="email" required placeholder="ex: JoaoAlberto@gmail.com">
         </div>
 
         <div class="form-group">
           <label for="telefone">Telefone:</label>
-          <input type="text" id="telefone" name="telefone" required placeholder="Digite seu telefone">
+          <input type="text" id="telefone" name="telefone" required placeholder="ex: 48994726152">
         </div>
 
         <div class="form-group">
           <label for="senha">Senha:</label>
-          <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+          <input type="password" id="senha" name="senha" required placeholder="ex: %SenhaForte000#$">
         </div>
 
         <div class="form-group">
           <select name="mensalidade" class="form-control" required>
             <option value="" disabled selected>Selecione uma opção de mensalidade</option>
-            <option value="2">Anual</option>
-            <option value="1">Mensal</option>
+            <option value="2">Anual - R$800,00</option>
+            <option value="1">Mensal - R$100,00</option>
           </select>
         </div>
 
