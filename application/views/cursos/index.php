@@ -23,10 +23,10 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card shadow-sm">
-                        <div class="card-header d-block text-center">
+                    <div class="cardfather">
+                        <div class="card-header d-block text-center bg-dark text-white">
                             <table>
-                                <strong  style="font-size: 20px;">Nossos cursos!</strong>
+                                <strong style="font-size: 20px;">Nossos cursos!</strong>
                             </table>
                         </div>
                         <div class="card-body">
@@ -405,3 +405,20 @@
             <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-dark"></i> by <a href="javascript:void" class="text-dark">Gabriel Nunes Vonsnievski</a></span>
         </div>
 </footer>
+
+<style>
+.cardfather{
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes respirar {
+  0% { transform: scale(1);}
+  50% { transform: scale(1.015);}
+  100% { transform: scale(1);}
+}
+
+.card {
+  animation: respirar 2s infinite ease-in-out;
+  border: 10px solid white;
+}
+</style>
