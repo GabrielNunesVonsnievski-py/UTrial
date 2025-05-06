@@ -17,7 +17,7 @@
                     <a class="header-dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true"><i class="ik ik-user ik-2x text-white"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                         <?php if ($this->session->userdata('logado')): ?>
-                            <a href="#" class="dropdown-item"><i class="fa-solid fa-user-tie dropdown-icon"></i><span><?= $this->session->userdata('nome') ?></span></a>
+                            <a href="#" class="dropdown-item"><i class="fa-solid fa-user-tie dropdown-icon"></i><span>&nbsp;&nbsp;<?= $this->session->userdata('nome') ?></span></a>
                             <a data-toggle="tooltip" data-placement="left" title="Encerrar a sessão" class="dropdown-item" href="<?= base_url('Auth/logout') ?>"><i class="ik ik-power dropdown-icon"></i> Sair</a>
                         <?php endif; ?>
                     </div>

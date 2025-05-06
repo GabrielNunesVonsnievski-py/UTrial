@@ -8,6 +8,9 @@ class Alunos extends CI_Controller{
 
 		$this->load->model('Alunos_model');
 
+		if (!$this->session->userdata('logado')) {
+			redirect('/login');
+		}
 	}
 
 	public function index()
