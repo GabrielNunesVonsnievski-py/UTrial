@@ -54,114 +54,124 @@
 </html>
 
 <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
 
-    body {
-      height: 100vh;
-      background-color: #2F343B;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+body {
+  height: 100vh;
+  background-color: #2F343B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .container {
-      display: flex;
-      width: 900px;
-      height: 500px;
-      background-color: #1E2227;
-      border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-      overflow: hidden;
-    }
+.container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.58);
+  overflow: hidden;
+}
 
-    .left-side {
-      flex: 1;
-      background-color: #2F343B;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+.left-side {
+  flex: 2;
+  background-color: #2F343B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 
-    .left-side img {
-      max-width: 100%;
-      max-height: 300px;
-    }
+.left-side img {
+  max-width: 100%;
+  max-height: 300px;
+}
 
-    .right-side {
-      flex: 1;
-      background-color: #262B31;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 40px;
-    }
+.right-side {
+  flex: 1;
+  background-color: #2F343B;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
 
-    .login-form {
-      width: 100%;
-      max-width: 300px;
-    }
+.login-form {
+  width: 100%;
+  max-width: 300px;
+}
 
-    .login-form h1 {
-      font-size: 26px;
-      text-align: center;
-      margin-bottom: 25px;
-    }
+.login-form h1 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-    .form-group {
-      margin-bottom: 20px;
-    }
+.form-group {
+  margin-bottom: 20px;
+}
 
-    .form-group span,
-    .form-group label {
-      font-size: 14px;
-      display: block;
-      margin-bottom: 6px;
-    }
+.form-group span,
+.form-group label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+}
 
-    .form-control {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: none;
-      font-size: 14px;
-    }
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
 
-    .btn-login {
-      width: 100%;
-      padding: 10px;
-      background: linear-gradient(90deg, #FF416C, #FF4B2B);
-      color: white;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
+.btn-login {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #FF416C, #FF4B2B);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
 
-    .btn-login:hover {
-      transform: scale(1.05);
-    }
+.btn-login:hover {
+  transform: scale(1.05);
+}
 
-    .btnCadastro {
-      margin-top: 20px;
-      text-align: center;
-    }
+.btnCadastro {
+  margin-top: 20px;
+  text-align: center;
+}
 
-    .btnCadastro a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 14px;
-    }
+.btnCadastro a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-    .btnCadastro a:hover {
-      color: #aaa;
-    }
+.btnCadastro a:hover {
+  color: #aaa;
+}
+
+@keyframes respirar {
+0% { transform: scale(1);}
+50% { transform: scale(1.1);}
+100% { transform: scale(1);}
+}
+
+.left-side {
+  animation: respirar 2s infinite ease-in-out;
+  
+}
   </style>

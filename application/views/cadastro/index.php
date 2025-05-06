@@ -82,14 +82,13 @@
       display: flex;
       width: 1000px;
       height: 600px;
-      background-color: #1E2227;
       border-radius: 20px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 8px 30px rgba(255, 255, 255, 0.67);
       overflow: hidden;
     }
 
     .left-side {
-      flex: 1;
+      flex: 2;
       background-color: #2F343B;
       display: flex;
       justify-content: center;
@@ -104,7 +103,7 @@
 
     .right-side {
       flex: 1;
-      background-color: #262B31;
+      background-color: #2F343B;
       color: white;
       display: flex;
       flex-direction: column;
@@ -170,4 +169,13 @@
       font-size: 14px;
     }
 
+    @keyframes respirar {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.1);}
+    100% { transform: scale(1);}
+    }
+
+    .left-side {
+      animation: respirar 2s infinite ease-in-out;
+    }
   </style>
