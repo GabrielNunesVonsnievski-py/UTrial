@@ -23,22 +23,24 @@
 
 
             <div>
-                <table class="tabTutor table-striped table-hover">
-                    <div class="card-header bg-dark d-block text-center text-white">
-                        <strong style="font-size: 20px;">LISTA DE ALUNOS</strong>
-                        <thead>
-                            <tr>
-                                <th class="text-center">#</th>
-                                <th class="text-left">Nome</th>
-                                <th class="text-center">CPF</th>
-                                <th class="text-center">E-mail</th>
-                                <th class="text-center">Telefone</th>
-                                <th class="text-center">ID Mensalidade</th>
-                                <th class="text-center">Editar</th>
-                                <th class="text-center">Excluir</th>
-                            </tr>
-                        </thead>
-                        <tbody >
+                <div class="card-header bg-dark d-block text-center text-white">
+                    <strong style="font-size: 20px;">LISTA DE ALUNOS</strong>
+                </div>
+
+                <table class="tabTutor table-striped table-hover" id="tabelausuarios">
+                    <thead>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th class="text-left">Nome</th>
+                            <th class="text-center">CPF</th>
+                            <th class="text-center">E-mail</th>
+                            <th class="text-center">Telefone</th>
+                            <th class="text-center">ID Mensalidade</th>
+                            <th class="text-center">Editar</th>
+                            <th class="text-center">Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         <?php if (!empty($getListaAlunos)):?>
                             <?php foreach ($getListaAlunos as $aluno): ?>
                                 <tr>
@@ -50,7 +52,7 @@
                                     <td class="text-center"><?php echo $aluno['mensalidade_id']; ?></td>
                                     <td class="text-center">
                                         <a href="<?php echo base_url('alunos/core'); ?>">
-                                            <button class="butNew2" title="Editar Aluno" ng-click="<?php echo base_url('alunos/core'); ?>">
+                                            <button class="butNew2" title="Editar Aluno">
                                                 <i class="fa-solid fa-pen-to-square text-primary"></i>
                                             </button>
                                         </a>
@@ -63,40 +65,41 @@
                                 </tr>
                             <?php endforeach; ?>
                         <?php else: ?>
-                            <tr><td colspan="7" class="text-center">Nenhum aluno cadastrado.</td></tr>
+                            <tr><td colspan="8" class="text-center">Nenhum aluno cadastrado.</td></tr>
                         <?php endif; ?>
-                        </tbody>
-                    </div>
+                    </tbody>
                 </table>
+                <div id="nav"></div> <!-- onde os botões de paginação aparecem -->
 
-                <?php
-                $page  = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
-                $limit = 5;
-                $ini   = $page * $limit;
-                $select  = "SELECT * FROM registros limit $ini, $limit";
-                $result  = mysqli_query($conexao, $select);
+                <script>
+                $(document).ready(function(){
+                    $('#tabelausuarios').after('<div id="nav"></div>');
+                    var rowsShown = 4;
+                    var rowsTotal = $('#tabelausuarios tbody tr').length;
+                    var numPages = Math.ceil(rowsTotal / rowsShown);
 
-                while($exibe = mysqli_fetch_assoc($result)){
-                    echo '<td>' . utf8_encode(strtolower($exibe['nome'])) . '</td>';
-                }
+                    for (var i = 0; i < numPages; i++) {
+                        var pageNum = i + 1;
+                        $('#nav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
+                    }
 
-                $sql2 = "SELECT count(*) as count FROM registros";
-                $resultado = mysqli_query($conexao, $sql2);
-                $row  = mysqli_fetch_assoc($resultado);
-                $total_registros = $row['count'];
-                $num_paginas     = ceil($total_registros / $limit);
-                ?>
+                    $('#tabelausuarios tbody tr').hide();
+                    $('#tabelausuarios tbody tr').slice(0, rowsShown).show();
+                    $('#nav a:first').addClass('active');
 
-                <div>
-                    <ul class="pagination pagination-sm pull-right">
-                        <li><a href="index.php?page=<?php echo $num_paginas -1?>" id="anterior"><<</a></li>
-                        <?php
-                            for($i = 1; $i <= $num_paginas; $i++){ ?>
-                                <li><a href="index.php?page=<?php echo $i - 1;?>"><?php echo $i;?></a></li>
-                        <?php }?>
-                        <li><a href="index.php?page=0">>></a></li>
-                    </ul>
-                </div>
+                    $('#nav a').bind('click', function(e){
+                        e.preventDefault();
+                        $('#nav a').removeClass('active');
+                        $(this).addClass('active');
+                        var currPage = $(this).attr('rel');
+                        var startItem = currPage * rowsShown;
+                        var endItem = startItem + rowsShown;
+                        $('#tabelausuarios tbody tr').css('opacity','0.0').hide()
+                            .slice(startItem, endItem).css('display','table-row').animate({opacity:1}, 300);
+                    });
+                });
+                </script>
+
             </div>
         </div>
     </div>
@@ -112,6 +115,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-utils-pagination/0.11.1/dirPagination.js"></script>
 <script src="<?php echo base_url('application/views/alunos/controller/alunosController.js'); ?>"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 <style>
 
