@@ -1,11 +1,11 @@
 <?php $this->load->view('layout/navbar');?>
 
-<div class="page-wrap" ng-app="">
+<div class="page-wrap">
 
     <?php  $this->load->view('layout/sidebar'); ?>
 
     <div class="main-content">
-    <div class="container-fluid">
+        <div class="container-fluid">
 
             <div class="page-header">
                 <div class="row align-items-end">
@@ -69,36 +69,7 @@
                         <?php endif; ?>
                     </tbody>
                 </table>
-                <div id="nav"></div> <!-- onde os botões de paginação aparecem -->
-
-                <script>
-                $(document).ready(function(){
-                    $('#tabelausuarios').after('<div id="nav"></div>');
-                    var rowsShown = 4;
-                    var rowsTotal = $('#tabelausuarios tbody tr').length;
-                    var numPages = Math.ceil(rowsTotal / rowsShown);
-
-                    for (var i = 0; i < numPages; i++) {
-                        var pageNum = i + 1;
-                        $('#nav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
-                    }
-
-                    $('#tabelausuarios tbody tr').hide();
-                    $('#tabelausuarios tbody tr').slice(0, rowsShown).show();
-                    $('#nav a:first').addClass('active');
-
-                    $('#nav a').bind('click', function(e){
-                        e.preventDefault();
-                        $('#nav a').removeClass('active');
-                        $(this).addClass('active');
-                        var currPage = $(this).attr('rel');
-                        var startItem = currPage * rowsShown;
-                        var endItem = startItem + rowsShown;
-                        $('#tabelausuarios tbody tr').css('opacity','0.0').hide()
-                            .slice(startItem, endItem).css('display','table-row').animate({opacity:1}, 300);
-                    });
-                });
-                </script>
+                <div class="nav" id="nav"></div> <!-- onde os botões de paginação aparecem -->
 
             </div>
         </div>
@@ -113,12 +84,75 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-utils-pagination/0.11.1/dirPagination.js"></script>
 <script src="<?php echo base_url('application/views/alunos/controller/alunosController.js'); ?>"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<script>
+
+    //paginação
+$(document).ready(function(){
+    $('#tabelausuarios').after('<div id="nav"></div>');
+    var rowsShown = 5;
+    var rowsTotal = $('#tabelausuarios tbody tr').length;
+    var numPages = Math.ceil(rowsTotal / rowsShown);
+
+    for (var i = 0; i < numPages; i++) {
+        var pageNum = i + 1;
+        $('#nav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
+    }
+
+    $('#tabelausuarios tbody tr').hide();
+    $('#tabelausuarios tbody tr').slice(0, rowsShown).show();
+    $('#nav a:first').addClass('active');
+
+    $('#nav a').bind('click', function(e){
+        e.preventDefault();
+        $('#nav a').removeClass('active');
+        $(this).addClass('active');
+        var currPage = $(this).attr('rel');
+        var startItem = currPage * rowsShown;
+        var endItem = startItem + rowsShown;
+        $('#tabelausuarios tbody tr').css('opacity','0.0').hide()
+            .slice(startItem, endItem).css('display','table-row').animate({opacity:1}, 300);
+    });
+});
+    //paginação
+
+</script>
 
 <style>
+
+#nav {
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+#nav a {
+    background-color:rgb(255, 255, 255);
+    color: black;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#nav a:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+#nav a.active {
+    background-color:rgb(255, 255, 255);
+    border-color:rgb(0, 0, 0);
+    color: black;
+    font-weight: bold;
+    transform: scale(1.1);
+}
 
 .card-header{
     border-radius: 10px 10px;
