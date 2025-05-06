@@ -1,3 +1,8 @@
+var appUtrial = angular.module("appUtrial", []);
+appUtrial.controller('UtrialController', function ($scope) {
+    
+})
+
 $scope.deletarUsuario = function(id) {
     if(confirm("Tem certeza que deseja excluir este aluno?")) {
         $http.delete('/api/usuarios/' + id).then(function(response) {

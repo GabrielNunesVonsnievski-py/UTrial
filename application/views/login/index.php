@@ -172,6 +172,6 @@ body {
 
 .left-side {
   animation: respirar 2s infinite ease-in-out;
-  
+
 }
   </style>
