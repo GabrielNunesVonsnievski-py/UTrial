@@ -53,10 +53,11 @@ class Auth extends CI_Controller {
                 'nome' =>$user->nome,
                 'logado' =>TRUE
             ]);
+            $this->session->set_flashdata('success', 'Bem vindo a Utrial');
             redirect('/home');
         }else {
             //falha ao logar
-            $this->session->set_flashdata('erro', 'Email ou senha inválidos');
+            $this->session->set_flashdata('error', 'Email ou senha inválidos');
             redirect('/login');
         }
     }

@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <?php if($message = $this->session->flashdata('sucesso')): ?>
+            <?php if($message = $this->session->flashdata('success')): ?>
 
                         <div class="row">
                             <div class="col-md-12">
