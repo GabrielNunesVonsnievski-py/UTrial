@@ -28,7 +28,7 @@
                                 <div class="alert bg-success alert-success text-white alert-dismissible fade show" role="alert">
                                     <strong><?php echo $message ?></strong>
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <i class="ik ik-x"></i>
+                                        <i class="fa-solid fa-xmark"></i>
                                     </button>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@
                                 <div class="alert bg-info alert-info text-white alert-dismissible fade show" role="alert">
                                     <strong><?php echo $message ?></strong>
                                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <i class="ik ik-x"></i>
+                                        <i class="fa-solid fa-xmark"></i>
                                     </button>
                                 </div>
                             </div>

@@ -53,7 +53,7 @@ class Auth extends CI_Controller {
                 'nome' =>$user->nome,
                 'logado' =>TRUE
             ]);
-            $this->session->set_flashdata('success', 'Bem vindo a Utrial');
+            $this->session->set_flashdata('success', "Bem vindo a Utrial {$user->nome} !");
             redirect('/home');
         }else {
             //falha ao logar
@@ -65,6 +65,6 @@ class Auth extends CI_Controller {
     public function logout()
     {
         $this->session->sess_destroy();
-        redirect('Auth/login');
+        redirect('/login');
     }
 }
