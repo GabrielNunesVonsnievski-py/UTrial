@@ -12,6 +12,15 @@
         <div class="nav-container">
             <nav id="main-menu-navigation" class="navigation-main">
 
+                <!-- MEU PAINEL -->
+                <div class="nav-label text-white p-2"><strong>MEU PAINEL</strong></div>
+                <div class="painel-links p-2 text-center">
+                    <a href="#" class="painel-item"><i class="fa-solid fa-bookmark"></i> Meus Cursos</a>
+                    <a href="#" class="painel-item"><i class="fa-solid fa-hand-holding-dollar"></i> Minhas Mensalidades</a>
+                    <a href="#" class="painel-item"><i class="fa-solid fa-certificate"></i> Meus Certificados</a>
+                    <a href="#" class="painel-item"><i class="fa-regular fa-circle-user"></i> Minha Conta</a>
+                </div>
+
                 <div class="nav-lavel text-white" style="background-color: #495057;"><strong>CURSOS</strong></div>
 
                 <!-- FRONT-END -->
@@ -59,15 +68,6 @@
                     <a href=""  ><i class="fa-solid fa-file-word"></i> Word</a>
                 </div>
 
-                <!-- MEU PAINEL -->
-                <div class="nav-label text-white p-2"><strong>MEU PAINEL</strong></div>
-                <div class="painel-links p-2 text-center">
-                    <a href="#" class="painel-item"><i class="fa-solid fa-bookmark"></i> Meus Cursos</a>
-                    <a href="#" class="painel-item"><i class="fa-solid fa-hand-holding-dollar"></i> Minhas Mensalidades</a>
-                    <a href="#" class="painel-item"><i class="fa-solid fa-certificate"></i> Meus Certificados</a>
-                    <a href="#" class="painel-item"><i class="fa-regular fa-circle-user"></i> Minha Conta</a>
-                </div>
-
                 <!-- ADMIN -->
                 <div class="nav-label text-white p-2"><strong>ADMINISTRAÇÃO</strong></div>
                 <div class="painel-links p-2 text-center">
@@ -75,6 +75,7 @@
                     <a href="#" class="painel-item"><i class="fa-solid fa-book-open"></i> Aulas</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-clock"></i> Horários</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-newspaper"></i> Avaliações</a>
+                    <a href="<?php echo base_url('/precificacoes'); ?>" class="painel-item"><i class="fa-solid fa-comment-dollar"></i> Precificações</a>
                 </div>
 
             </nav>
@@ -133,7 +134,6 @@
     transition: max-height 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
-    /* padding-left: 20px;  <== REMOVER ESSA LINHA */
 }
 
 .dropdown-content.show {

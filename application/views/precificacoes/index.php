@@ -24,35 +24,27 @@
 
             <div>
                 <div class="card-header bg-dark d-block text-center text-white">
-                    <strong style="font-size: 20px;">LISTA DE ALUNOS</strong>
+                    <strong style="font-size: 20px;">LISTA DE PRECIFICAÇÕES</strong>
                 </div>
 
                 <table class="tabTutor table-striped table-hover" id="tabelausuarios">
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th class="text-left">Nome</th>
-                            <th class="text-center">CPF</th>
-                            <th class="text-center">E-mail</th>
-                            <th class="text-center">Telefone</th>
-                            <th class="text-center">ID Mensalidade</th>
-                            <th class="text-center">Editar</th>
-                            <th class="text-center">Excluir</th>
+                            <th class="text-left">Tipo</th>
+                            <th class="text-center">Valor</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if (!empty($getListaAlunos)):?>
-                            <?php foreach ($getListaAlunos as $aluno): ?>
+                        <?php if (!empty($getListaPrecificacoes)):?>
+                            <?php foreach ($getListaPrecificacoes as $preco): ?>
                                 <tr>
-                                    <td class="text-center"><?php echo $aluno['id']; ?></td>
-                                    <td class="text-left"><?php echo strtoupper($aluno['nome']); ?></td>
-                                    <td class="text-center"><?php echo $aluno['cpf']; ?></td>
-                                    <td class="text-center"><?php echo $aluno['email']; ?></td>
-                                    <td class="text-center"><?php echo $aluno['telefone']; ?></td>
-                                    <td class="text-center"><?php echo $aluno['mensalidade_id']; ?></td>
+                                    <td class="text-center"><?php echo $preco['id']; ?></td>
+                                    <td class="text-left"><?php echo strtoupper($preco['tipo']); ?></td>
+                                    <td class="text-center"><?php echo $preco['valor']; ?></td>
                                     <td class="text-center">
-                                        <a href="<?php echo base_url('alunos/core'); ?>">
-                                            <button class="butNew2" title="Editar Aluno">
+                                        <a href="<?php echo base_url('precificacoes/core'); ?>">
+                                            <button class="butNew2" title="Editar Precificações">
                                                 <i class="fa-solid fa-pen-to-square text-primary"></i>
                                             </button>
                                         </a>
@@ -84,7 +76,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-<script src="<?php echo base_url('application/views/alunos/controller/alunosController.js'); ?>"></script>
+<script src="<?php echo base_url('application/views/precificacoes/controller/alunosController.js'); ?>"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>

@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Alunos extends CI_Controller{
+class Precificacoes extends CI_Controller{
 
     public function __construct(){
 		parent:: __construct();
 
-		$this->load->model('Alunos_model');
+		$this->load->model('Precificacoes_model');
 
 		if (!$this->session->userdata('logado')) {
 			redirect('/login');
@@ -16,7 +16,7 @@ class Alunos extends CI_Controller{
 	public function index()
 	{
 		$data = array(
-			'titulo' => 'Utrial | Alunos',
+			'titulo' => 'Utrial | Precificações',
 			'sub_titulo' => 'Gerenciar Precificações',
 			'icone_view' => 'fas fa-users',
 			'styles' => array(
@@ -32,10 +32,10 @@ class Alunos extends CI_Controller{
 			),
 		);
 
-		$data['getListaAlunos'] = $this->Alunos_model->getListaAlunos();
+		$data['getListaPrecificacoes'] = $this->Precificacoes_model->getListaPrecificacoes();
 
 		$this->load->view('layout/header', $data);
-		$this->load->view('alunos/index');
+		$this->load->view('precificacoes/index');
 		$this->load->view('layout/footer');
 
 	}
