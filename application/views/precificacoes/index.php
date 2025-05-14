@@ -31,7 +31,7 @@
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th class="text-left">Tipo</th>
+                            <th class="text-center">Tipo</th>
                             <th class="text-center">Valor</th>
                         </tr>
                     </thead>
@@ -40,20 +40,9 @@
                             <?php foreach ($getListaPrecificacoes as $preco): ?>
                                 <tr>
                                     <td class="text-center"><?php echo $preco['id']; ?></td>
-                                    <td class="text-left"><?php echo strtoupper($preco['tipo']); ?></td>
-                                    <td class="text-center"><?php echo $preco['valor']; ?></td>
-                                    <td class="text-center">
-                                        <a href="<?php echo base_url('precificacoes/core'); ?>">
-                                            <button class="butNew2" title="Editar Precificações">
-                                                <i class="fa-solid fa-pen-to-square text-primary"></i>
-                                            </button>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <button class="butNew2" title="Excluir Aluno" ng-click="deletarUsuario({$aluno.id})">
-                                            <i class="fa-solid fa-trash text-danger"></i>
-                                        </button>
-                                    </td>
+                                    <td class="text-center"><?php echo strtoupper($preco['tipo']); ?></td>
+                                    <td class="text-center">R$<?php echo $preco['valor']; ?></td>
+
                                 </tr>
                             <?php endforeach; ?>
                         <?php else: ?>
