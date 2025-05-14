@@ -58,7 +58,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <button class="butNew2" title="Excluir Aluno" ng-click="deletarUsuario({$aluno.id})">
+                                        <button class="butNew2" title="Excluir Aluno" ng-click="deletarUsuario(<?php echo $aluno['id']; ?>)">
                                             <i class="fa-solid fa-trash text-danger"></i>
                                         </button>
                                     </td>
@@ -83,7 +83,6 @@
     </footer>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script src="<?php echo base_url('application/views/alunos/controller/alunosController.js'); ?>"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -117,6 +116,24 @@ $(document).ready(function(){
     });
 });
     //paginação
+
+angular.module("appUtrial", []).controller('UtrialController', function ($scope, $http) {
+
+    $scope.deletarUsuario = function(id) {
+        if (confirm("Tem certeza que deseja excluir este aluno?")) {
+            $http.delete('Alunos/deletar/' + id)
+                .then(function(response) {
+                    alert("Aluno excluído com sucesso!");
+                    window.location.reload();
+                })
+                .catch(function(error) {
+                    alert("Erro ao excluir aluno!");
+                    console.error(error);
+                });
+        }
+    };
+
+});
 
 </script>
 

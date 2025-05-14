@@ -66,9 +66,12 @@ class Alunos extends CI_Controller{
 
 	}
 
-	public function delete($id) {
-		$this->load->model('Alunos_model');
-		$this->Alunos_model->deletar($id);
-		echo json_encode(['status' => true]);
+	public function deletar($id) {
+        $this->load->model('Alunos_model');
+        if ($this->Alunos_model->deletar($id)) {
+            echo json_encode(['status' => 'success']);
+        } else {
+            echo json_encode(['status' => 'erro']);
+        }
 	}
 }
