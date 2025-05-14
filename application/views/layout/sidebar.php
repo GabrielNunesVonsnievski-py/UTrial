@@ -18,7 +18,7 @@
                     <a href="#" class="painel-item"><i class="fa-solid fa-bookmark"></i> Meus Cursos</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-hand-holding-dollar"></i> Minhas Mensalidades</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-certificate"></i> Meus Certificados</a>
-                    <a href="#" class="painel-item"><i class="fa-regular fa-circle-user"></i> Minha Conta</a>
+                    <a href="<?php echo base_url('/alunos/editInfoUsuario/' . $this->session->userdata('usuario_id')); ?>" class="painel-item"><i class="fa-regular fa-circle-user"></i> Minha Conta</a>
                 </div>
 
                 <div class="nav-lavel text-white" style="background-color: #495057;"><strong>CURSOS</strong></div>

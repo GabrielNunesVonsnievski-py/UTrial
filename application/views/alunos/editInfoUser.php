@@ -25,34 +25,34 @@
                 <div class="col-md-12 text-center">
                     <div class="card">
                         <div class="card-header d-block text-center bg-dark text-white">
-                            <strong style="font-size: 20px;">EDITAR ALUNO</strong>
+                            <strong style="font-size: 20px;">EDITAR MINHAS INFORMAÇÕES</strong>
                         </div>
                             <div class="card-body">
                                 <form action=" " method="POST">
                                     <div class="row g-3">
 
-                                        <div class="col-md-12">
-                                            <input name="nome" type="text" class="form-control" placeholder="Nome completo" required>
-                                        </div>
-
-                                        <div class="col-md-6 mt-3">
-                                            <input name="CPF" type="text" class="form-control" placeholder="CPF" disabled>
-                                        </div>
-
-                                        <div class="col-md-6 mt-3">
-                                            <input name="email" type="email" class="form-control" placeholder="Email" disabled>
-                                        </div>
-
-                                        <div class="col-md-6 mt-3">
-                                            <input name="telefone" type="text" class="form-control" placeholder="Telefone" disabled>
+                                        <div class="divID">
+                                            <input name="nome" type="text" class="form-control text-center"  value="<?php echo isset($aluno) ? $aluno->id : '' ?>" disabled>
                                         </div>
 
                                         <div class="col-md-12 mt-3">
-                                            <select name="mensalidade" class="form-control" disabled>
-                                                <option value="" disabled selected>Selecione uma opção de mensalidade</option>
-                                                <option value="anual">Anual</option>
-                                                <option value="mensal">Mensal</option>
-                                            </select>
+                                            <input name="nome" type="text" class="form-control" value="<?php echo isset($aluno) ? $aluno->nome : '' ?>">
+                                        </div>
+
+                                        <div class="col-md-6 mt-3">
+                                            <input name="CPF" type="text" class="form-control" value="<?php echo isset($aluno) ? $aluno->cpf : '' ?>">
+                                        </div>
+
+                                        <div class="col-md-6 mt-3">
+                                            <input name="email" type="email" class="form-control" value="<?php echo isset($aluno) ? $aluno->email : '' ?>">
+                                        </div>
+
+                                        <div class="col-md-6 mt-3">
+                                            <input name="telefone" type="text" class="form-control" value="<?php echo isset($aluno) ? $aluno->telefone : '' ?>">
+                                        </div>
+
+                                        <div class="col-md-6 mt-3">
+                                            <input name="senha" type="password" class="form-control" value="<?php echo isset($aluno) ? $aluno->senha : '' ?>">
                                         </div>
 
                                         <div class="col-12 text-center mt-3">
@@ -83,7 +83,7 @@
 
 @keyframes respirar {
   0% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.05); opacity: 1.5; }
+  50% { transform: scale(1.05); opacity: 1.2; }
   100% { transform: scale(1); opacity: 0.8; }
 }
 
@@ -96,4 +96,9 @@
     box-shadow: 2px 2px 20px;
 }
 
+.divID{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+}
 </style>

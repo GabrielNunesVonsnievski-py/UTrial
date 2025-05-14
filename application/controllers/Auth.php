@@ -51,6 +51,11 @@ class Auth extends CI_Controller {
             $this->session->set_userdata([
                 'usuario_id' =>$user->id,
                 'nome' =>$user->nome,
+                'CPF' =>$user->CPF,
+                'email' =>$user->email,
+                'telefone' =>$user->telefone,
+                'mensalidade' =>$user->mensalidade_id,
+                'senha' =>$user->senha,
                 'logado' =>TRUE
             ]);
             $this->session->set_flashdata('success', "Bem vindo a Utrial {$user->nome} !");
