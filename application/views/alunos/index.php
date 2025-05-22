@@ -31,13 +31,19 @@
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th class="text-left">Nome</th>
+                            <th class="text-center">Nome</th>
                             <th class="text-center">CPF</th>
                             <th class="text-center">E-mail</th>
                             <th class="text-center">Telefone</th>
                             <th class="text-center">ID Mensalidade</th>
+
+                            <?php if($this->session->userdata('is_admin')): ?>
+
                             <th class="text-center">Editar</th>
                             <th class="text-center">Excluir</th>
+
+                            <?php endif; ?>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -50,8 +56,11 @@
                                     <td class="text-center"><?php echo $aluno['email']; ?></td>
                                     <td class="text-center"><?php echo $aluno['telefone']; ?></td>
                                     <td class="text-center"><?php echo $aluno['mensalidade_id']; ?></td>
+
+                                    <?php if ($this->session->userdata('is_admin')): ?>
+
                                     <td class="text-center">
-                                        <a href="<?php echo base_url('alunos/core/' . $this->session->userdata('usuario_id')); ?>">
+                                        <a href="<?php echo base_url('alunos/core/' . $aluno['id']); ?>">
                                             <button class="butNew2" title="Editar Aluno">
                                                 <i class="fa-solid fa-pen-to-square text-primary"></i>
                                             </button>
@@ -62,6 +71,9 @@
                                             <i class="fa-solid fa-trash text-danger"></i>
                                         </button>
                                     </td>
+
+                                    <?php endif; ?>
+
                                 </tr>
                             <?php endforeach; ?>
                         <?php else: ?>
