@@ -51,7 +51,7 @@
                                     <td class="text-center"><?php echo $aluno['telefone']; ?></td>
                                     <td class="text-center"><?php echo $aluno['mensalidade_id']; ?></td>
                                     <td class="text-center">
-                                        <a href="<?php echo base_url('alunos/core'); ?>">
+                                        <a href="<?php echo base_url('alunos/core/' . $this->session->userdata('usuario_id')); ?>">
                                             <button class="butNew2" title="Editar Aluno">
                                                 <i class="fa-solid fa-pen-to-square text-primary"></i>
                                             </button>

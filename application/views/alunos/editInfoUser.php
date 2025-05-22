@@ -1,6 +1,6 @@
 <?php $this->load->view('layout/navbar');?>
 
-<div class="page-wrap">
+<div class="page-wrap" ng-app="appUtrial" ng-controller="UtrialController">
 
     <?php  $this->load->view('layout/sidebar'); ?>
 
