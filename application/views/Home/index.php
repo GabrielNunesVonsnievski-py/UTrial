@@ -14,7 +14,6 @@
                             <i class="<?php echo $icone_view ?> bg-dark"></i>
                             <div class="d-inline">
                                 <h5><?php echo $titulo ?></h5>
-                                <span><?php echo $sub_titulo; ?></span>
                             </div>
                         </div>
                     </div>
@@ -81,10 +80,10 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer text-white bg-dark">
         <div class="w-100 clearfix">
             <span class="text-center text-sm-left d-md-inline-block"> <?php echo date('Y') ?> Utrial v2.0. Todos os direitos reservados.</span>
-            <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-dark"></i> by <a href="javascript:void" class="text-dark">Gabriel Nunes Vonsnievski</a></span>
+            <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-white"></i> by <a href="javascript:void" class="text-white">Gabriel Nunes Vonsnievski</a></span>
         </div>
     </footer>
 </div>

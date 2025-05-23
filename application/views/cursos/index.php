@@ -14,7 +14,6 @@
                             <i class="<?php echo $icone_view ?> bg-dark"></i>
                             <div class="d-inline">
                                 <h5><?php echo $titulo ?></h5>
-                                <span><?php echo $sub_titulo; ?></span>
                             </div>
                         </div>
                     </div>
@@ -31,16 +30,16 @@
 
                             <div class="row">
                                 <?php foreach ($cursos as $curso) { ?>
-                                    <div class="col-xl-4 col-md-6 mb-4">
+                                    <div class="col-xl-3 col-md-7 mb-4">
                                         <div class="card curso-card text-center">
                                             <div class="card-body">
                                                 <div class="icon-wrapper mb-3">
                                                     <i class="<?php echo $curso->icone; ?> f-50"></i>
                                                 </div>
                                                 <h5 class="curso-nome"><?php echo $curso->nome; ?></h5>
-                                                <p class="curso-preco">R$ <?php echo $curso->valor; ?></p>
+                                                <p class="curso-preco">$ <?php echo $curso->valor; ?></p>
                                                 <p class="curso-duracao"><?php echo $curso->duracao; ?> Horas</p>
-                                                <span class="badge badge-dark">UTrial</span>
+                                                <button class="btn btn-success">Adquirir</button>
                                             </div>
                                         </div>
                                     </div>
@@ -53,10 +52,10 @@
             </div>
         </div>
     </div>
-        <footer class="footer">
+        <footer class="footer text-white bg-dark">
         <div class="w-100 clearfix">
             <span class="text-center text-sm-left d-md-inline-block"><?php echo date('Y') ?> Utrial v2.0. Todos os direitos reservados.</span>
-            <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-dark"></i> by <a href="javascript:void" class="text-dark">Gabriel Nunes Vonsnievski</a></span>
+            <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-white"></i> by <a href="javascript:void" class="text-white">Gabriel Nunes Vonsnievski</a></span>
         </div>
     </footer>
 

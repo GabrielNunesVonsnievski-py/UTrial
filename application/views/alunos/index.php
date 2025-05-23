@@ -14,7 +14,6 @@
                             <i class="<?php echo $icone_view ?> bg-dark"></i>
                             <div class="d-inline">
                                 <h5><?php echo $titulo ?></h5>
-                                <span><?php echo $sub_titulo; ?></span>
                             </div>
                         </div>
                     </div>
@@ -53,13 +52,13 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url('alunos/core/' . $aluno['id']); ?>">
                                             <button class="butNew2" title="Editar Aluno">
-                                                <i class="fa-solid fa-pen-to-square text-primary"></i>
+                                                <i class="fa-solid fa-pencil"></i>
                                             </button>
                                         </a>
                                     </td>
                                     <td>
                                         <button class="butNew2" title="Excluir Aluno" ng-click="deletarUsuario(<?php echo $aluno['id']; ?>)">
-                                            <i class="fa-solid fa-trash text-danger"></i>
+                                            <i class="fa-solid fa-trash-can"></i>
                                         </button>
                                     </td>
                                 </tr>
@@ -75,10 +74,10 @@
         </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer text-white bg-dark">
         <div class="w-100 clearfix">
             <span class="text-center text-sm-left d-md-inline-block"> <?php echo date('Y') ?> Utrial v2.0. Todos os direitos reservados.</span>
-            <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-dark"></i> by <a href="javascript:void" class="text-dark">Gabriel Nunes Vonsnievski</a></span>
+            <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Customizado <i class="fas fa-code text-white"></i> by <a href="javascript:void" class="text-white">Gabriel Nunes Vonsnievski</a></span>
         </div>
     </footer>
 </div>
@@ -215,7 +214,7 @@ angular.module("appUtrial", []).controller('UtrialController', function ($scope,
     background-color: #646FAD;
 }
 
-/* .butNew {
+/* .butNew2 {
     padding: 8px 25px;
     border: none;
     border-radius: 2px;
@@ -229,7 +228,7 @@ angular.module("appUtrial", []).controller('UtrialController', function ($scope,
     text-decoration: none!important;
     display: inline-block;
 }
-.butNew:hover {
+.butNew2:hover {
     color: #fff;
     text-decoration: none!important;
     background-color: #69B759;
@@ -247,20 +246,14 @@ angular.module("appUtrial", []).controller('UtrialController', function ($scope,
     letter-spacing: 0px;
     text-decoration: none!important;
     display: inline-block;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgb(255, 255, 255);
     background: #e2e2e2;
-    background: -moz-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
-    background: -webkit-linear-gradient(top, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
-    background: linear-gradient(to bottom, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 );
 }
-.butNew2:hover {
+ .butNew2:hover {
     color: #fff;
     text-decoration: none!important;
     background: #e2e2e2;
-    background: -moz-linear-gradient(top, #F2F2F2 0%, #E9E9E9 10%, #d1d1d1 51%, #fefefe 100%);
-    background: -webkit-linear-gradient(top, #F2F2F2 0%,#E9E9E9 10%,#d1d1d1 51%,#fefefe 100%);
-    background: linear-gradient(to bottom, #F2F2F2 0%,#E9E9E9 10%,#d1d1d1 51%,#fefefe 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2F2F2', endColorstr='#fefefe',GradientType=0 );
     transform: scale(1.3);
 }
