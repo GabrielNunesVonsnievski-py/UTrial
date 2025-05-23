@@ -13,7 +13,7 @@
             <nav id="main-menu-navigation" class="navigation-main">
 
                 <!-- MEU PAINEL -->
-                <div class="nav-label text-white p-2"><strong>MEU PAINEL</strong></div>
+                <div class="nav-label text-white p-2"><strong>&nbsp;&nbsp;MEU PAINEL</strong></div>
                 <div class="painel-links p-2 text-center">
                     <a href="#" class="painel-item"><i class="fa-solid fa-bookmark"></i> Meus Cursos</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-hand-holding-dollar"></i> Minhas Mensalidades</a>
@@ -21,7 +21,7 @@
                     <a href="<?php echo base_url('/Usuario/editInfoUsuario/' . $this->session->userdata('usuario_id')); ?>" class="painel-item"><i class="fa-regular fa-circle-user"></i> Minha Conta</a>
                 </div>
 
-                <div class="nav-lavel text-white" style="background-color: #495057;"><strong>CURSOS</strong></div>
+                <div class="nav-lavel" style="background-color: #495057;"><strong><a class='text-white' href="<?php echo base_url('/cursos/') ?>">CURSOS</a></strong></div>
 
                 <!-- FRONT-END -->
                 <div class="nav-item dropdown-toggle" onclick="toggleDropdown('frontend')">
@@ -69,7 +69,7 @@
                 </div>
 
                 <!-- ADMIN -->
-                <div class="nav-label text-white p-2"><strong>ADMINISTRAÇÃO</strong></div>
+                <div class="nav-label text-white p-2"><strong>&nbsp;&nbsp;ADMINISTRAÇÃO</strong></div>
                 <div class="painel-links p-2 text-center">
                     <a href="<?php echo base_url('/alunos');?>" class="painel-item"><i class="nav-item fa-solid fa-users"></i> Alunos</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-book-open"></i> Aulas</a>
