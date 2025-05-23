@@ -44,7 +44,7 @@ class Alunos extends CI_Controller{
 
 	}
 
-    public function core()
+    public function core($id = null)
 	{
 		$data = array(
 			'titulo' => 'Utrial | Alunos',
@@ -64,8 +64,12 @@ class Alunos extends CI_Controller{
 
 		);
 
+		if ($id) {
+			$info['aluno'] = $this->Alunos_model->get_by_id($id);
+		}
+
 		$this->load->view('layout/header', $data);
-		$this->load->view('alunos/core');
+		$this->load->view('alunos/core', $info);
 		$this->load->view('layout/footer');
 
 	}
