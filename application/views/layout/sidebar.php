@@ -3,7 +3,9 @@
     <div class="sidebar-header bg-dark">
         <a class="header-brand" href="<?php echo base_url('/home') ?>">
             <div class="logo-img">
-                <img src="public/img/Utrial_logo.png" class="header-brand-img" alt="logo do site utrial">
+                <a href="<?php echo base_url(); ?>">
+                    <img src="<?php echo base_url('public/img/Utrial_logo.png'); ?>" alt="logo do site utrial" style="height 200px; width: 200px;">
+                </a>
             </div>
         </a>
     </div>
