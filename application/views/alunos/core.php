@@ -35,41 +35,33 @@
                                         <form action=" " method="POST">
                                             <div class="row g-3">
 
-                                                <div class="divID">ID:
+                                                <div class="col-md-1 mt-3">ID:
                                                     <input name="nome" type="text" class="form-control text-center"  value="<?php echo isset($aluno) ? $aluno->id : '' ?>" disabled>
                                                 </div>
 
-                                                <div class="col-md-12 mt-3">Nome:
-                                                    <input name="nome" type="text" class="form-control" value="<?php echo isset($aluno) ? $aluno->nome : '' ?>">
+                                                <div class="col-md-11 mt-3">Nome:
+                                                    <input name="nome" type="text" class="form-control text-center" value="<?php echo isset($aluno) ? $aluno->nome : '' ?>">
                                                 </div>
 
                                                 <div class="col-md-6 mt-3">CPF:
-                                                    <input name="CPF" type="text" class="form-control" value="<?php echo isset($aluno) ? $aluno->cpf : '' ?>">
+                                                    <input name="CPF" type="text" class="form-control text-center" value="<?php echo isset($aluno) ? $aluno->cpf : '' ?>">
                                                 </div>
 
                                                 <div class="col-md-6 mt-3">E-mail:
-                                                    <input name="email" type="email" class="form-control" value="<?php echo isset($aluno) ? $aluno->email : '' ?>">
+                                                    <input name="email" type="email" class="form-control text-center" value="<?php echo isset($aluno) ? $aluno->email : '' ?>">
                                                 </div>
 
                                                 <div class="col-md-6 mt-3">Telefone:
-                                                    <input name="telefone" type="text" class="form-control" value="<?php echo isset($aluno) ? $aluno->telefone : '' ?>">
+                                                    <input name="telefone" type="text" class="form-control text-center" value="<?php echo isset($aluno) ? $aluno->telefone : '' ?>">
                                                 </div>
 
                                                 <div class="col-md-6 mt-3">Senha:
-                                                    <input name="senha" type="password" class="form-control" value="<?php echo isset($aluno) ? $aluno->senha : '' ?>">
+                                                    <input name="senha" type="password" class="form-control text-center" value="<?php echo isset($aluno) ? $aluno->senha : '' ?>">
                                                 </div>
 
                                             </div>
                                         </form>
                                     </div>
-
-                                        <div class="col-md-12 mt-3">
-                                            <select name="mensalidade" class="form-control" disabled>
-                                                <option value="" disabled selected>Selecione uma opção de mensalidade</option>
-                                                <option value="anual">Anual</option>
-                                                <option value="mensal">Mensal</option>
-                                            </select>
-                                        </div>
 
                                         <div class="col-12 text-center mt-3">
                                             <button type="submit" class="btn btn-respirando btn-dark">
