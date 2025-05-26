@@ -20,7 +20,12 @@
                 </div>
             </div>
 
-
+            <div class="#" style="text-center">
+                <a href="<?php echo base_url('/aulas/AdicionarAulas'); ?>">
+                    <button class="btn btn-dark btnADCurso">Adicionar Aulas</button>
+                </a>
+            </div>
+            <br>
             <div>
                 <div class="card-header bg-dark d-block text-center text-white">
                     <strong style="font-size: 20px;">LISTA DE AULAS</strong>
@@ -253,14 +258,14 @@ angular.module("appUtrial", []).controller('UtrialController', function ($scope,
     transform: scale(1.3);
 }
 
-@keyframes respirar {
-  0% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.05); opacity: 1.2; }
-  100% { transform: scale(1); opacity: 0.6; }
+.btnADCurso{
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-respirando {
-  animation: respirar 2s infinite ease-in-out;
+.btnADCurso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 </style>
