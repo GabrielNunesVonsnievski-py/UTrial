@@ -74,7 +74,7 @@
                 <div class="nav-label text-white p-2"><strong>&nbsp;&nbsp;ADMINISTRAÇÃO</strong></div>
                 <div class="painel-links p-2 text-center">
                     <a href="<?php echo base_url('/alunos');?>" class="painel-item"><i class="nav-item fa-solid fa-users"></i> Alunos</a>
-                    <a href="#" class="painel-item"><i class="fa-solid fa-book-open"></i> Aulas</a>
+                    <a href="<?php echo base_url('/aulas') ?>" class="painel-item"><i class="fa-solid fa-book-open"></i> Aulas</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-clock"></i> Horários</a>
                     <a href="#" class="painel-item"><i class="fa-solid fa-newspaper"></i> Avaliações</a>
                     <a href="<?php echo base_url('/precificacoes'); ?>" class="painel-item"><i class="fa-solid fa-comment-dollar"></i> Precificações</a>

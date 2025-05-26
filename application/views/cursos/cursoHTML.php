@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
         <footer class="footer text-white bg-dark">
