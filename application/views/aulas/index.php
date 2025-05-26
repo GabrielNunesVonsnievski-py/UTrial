@@ -26,7 +26,7 @@
                     <strong style="font-size: 20px;">LISTA DE AULAS</strong>
                 </div>
 
-                <table class="tabTutor table-striped table-hover" id="tabelausuarios">
+                <table class="tabTutor table-striped table-hover" id="tabelaAulas">
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
@@ -55,7 +55,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <button class="butNew2" title="Excluir Aula" ng-click="deletarUsuario(<?php echo $aulas['id']; ?>)">
+                                        <button class="butNew2" title="Excluir Aula" ng-click="deletarAula(<?php echo $aulas['id']; ?>)">
                                             <i class="fa-solid fa-trash-can"></i>
                                         </button>
                                     </td>
@@ -84,9 +84,9 @@
 
     //paginação
 $(document).ready(function(){
-    $('#tabelausuarios').after('<div id="nav"></div>');
+    $('#tabelaAulas').after('<div id="nav"></div>');
     var rowsShown = 5;
-    var rowsTotal = $('#tabelausuarios tbody tr').length;
+    var rowsTotal = $('#tabelaAulas tbody tr').length;
     var numPages = Math.ceil(rowsTotal / rowsShown);
 
     for (var i = 0; i < numPages; i++) {
@@ -94,8 +94,8 @@ $(document).ready(function(){
         $('#nav').append('<a href="#" rel="'+i+'">'+pageNum+'</a> ');
     }
 
-    $('#tabelausuarios tbody tr').hide();
-    $('#tabelausuarios tbody tr').slice(0, rowsShown).show();
+    $('#tabelaAulas tbody tr').hide();
+    $('#tabelaAulas tbody tr').slice(0, rowsShown).show();
     $('#nav a:first').addClass('active');
 
     $('#nav a').bind('click', function(e){
@@ -105,7 +105,7 @@ $(document).ready(function(){
         var currPage = $(this).attr('rel');
         var startItem = currPage * rowsShown;
         var endItem = startItem + rowsShown;
-        $('#tabelausuarios tbody tr').css('opacity','0.0').hide()
+        $('#tabelaAulas tbody tr').css('opacity','0.0').hide()
             .slice(startItem, endItem).css('display','table-row').animate({opacity:1}, 300);
     });
 });
@@ -113,15 +113,15 @@ $(document).ready(function(){
 
 angular.module("appUtrial", []).controller('UtrialController', function ($scope, $http) {
 
-    $scope.deletarUsuario = function(id) {
-        if (confirm("Tem certeza que deseja excluir este aluno?")) {
-            $http.delete('Alunos/deletar/' + id)
+    $scope.deletarAula = function(id) {
+        if (confirm("Tem certeza que deseja excluir esta aula?")) {
+            $http.delete('Aulas/deletar/' + id)
                 .then(function(response) {
-                    alert("Aluno excluído com sucesso!");
+                    alert("Aula excluída com sucesso!");
                     window.location.reload();
                 })
                 .catch(function(error) {
-                    alert("Erro ao excluir aluno!");
+                    alert("Erro ao excluir aula!");
                     console.error(error);
                 });
         }

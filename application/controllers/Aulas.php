@@ -8,10 +8,6 @@ class Aulas extends CI_Controller{
 
 		$this->load->model('Aulas_model');
 
-		if (!$this->session->userdata('logado')) {
-			redirect('/login');
-		}
-
 		if(!$this->session->userdata('is_admin')) {
 			$this->session->set_flashdata('info', 'Você você não tem permissão para essa página!' );
 		}
@@ -67,7 +63,7 @@ class Aulas extends CI_Controller{
 		}
 
 		$this->load->view('layout/header', $data);
-		$this->load->view('alunos/core', $info);
+		$this->load->view('aulas/core', $info);
 		$this->load->view('layout/footer');
 
 	}

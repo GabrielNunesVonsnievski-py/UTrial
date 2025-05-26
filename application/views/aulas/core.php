@@ -24,7 +24,7 @@
                 <div class="col-md-12 text-center">
                     <div class="card">
                         <div class="card-header d-block text-center bg-dark text-white">
-                            <strong style="font-size: 20px;">EDITAR ALUNO</strong>
+                            <strong style="font-size: 20px;">EDITAR AULA</strong>
                         </div>
                             <div class="card-body">
                                 <form action=" " method="POST">
@@ -35,27 +35,23 @@
                                             <div class="row g-3">
 
                                                 <div class="col-md-1 mt-3">ID:
-                                                    <input name="nome" type="text" class="form-control text-center"  value="<?php echo isset($aluno) ? $aluno->id : '' ?>" disabled>
+                                                    <input name="id" type="text" class="form-control text-center"  value="<?php echo isset($aulas) ? $aulas->id : '' ?>" disabled>
                                                 </div>
 
-                                                <div class="col-md-11 mt-3">Nome:
-                                                    <input name="nome" type="text" class="form-control text-center" value="<?php echo isset($aluno) ? $aluno->nome : '' ?>">
+                                                <div class="col-md-11 mt-3">Curso ID:
+                                                    <input name="cursoID" type="text" class="form-control text-center" value="<?php echo isset($aulas) ? $aulas->curso_id : '' ?>" disabled>
                                                 </div>
 
-                                                <div class="col-md-6 mt-3">CPF:
-                                                    <input name="CPF" type="text" class="form-control text-center" value="<?php echo isset($aluno) ? $aluno->cpf : '' ?>">
+                                                <div class="col-md-6 mt-3">Título:
+                                                    <input name="titulo" type="text" class="form-control text-center" value="<?php echo isset($aulas) ? $aulas->titulo : '' ?>">
                                                 </div>
 
-                                                <div class="col-md-6 mt-3">E-mail:
-                                                    <input name="email" type="email" class="form-control text-center" value="<?php echo isset($aluno) ? $aluno->email : '' ?>">
+                                                <div class="col-md-6 mt-3">Descrição:
+                                                    <input name="descricao" type="text" class="form-control text-center" value="<?php echo isset($aulas) ? $aulas->descricao : '' ?>">
                                                 </div>
 
-                                                <div class="col-md-6 mt-3">Telefone:
-                                                    <input name="telefone" type="text" class="form-control text-center" value="<?php echo isset($aluno) ? $aluno->telefone : '' ?>">
-                                                </div>
-
-                                                <div class="col-md-6 mt-3">Senha:
-                                                    <input name="senha" type="password" class="form-control text-center" value="<?php echo isset($aluno) ? $aluno->senha : '' ?>">
+                                                <div class="col-md-6 mt-3">URL:
+                                                    <input name="videoURL" type="text" class="form-control text-center" value="<?php echo isset($aulas) ? $aulas->video_url : '' ?>">
                                                 </div>
 
                                             </div>
