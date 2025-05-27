@@ -30,7 +30,7 @@
                     <div class="painel-item nav-lavel bg-dark text-white"><i class="fa-solid fa-caret-down"></i>Front-End</div>
                 </div>
                 <div id="frontend" class="dropdown-content">
-                    <a href=""><i class="fa-brands fa-html5"></i> HTML</a>
+                    <a href="<?php echo base_url('/cursos/HTML') ?>"><i class="fa-brands fa-html5"></i> HTML</a>
                     <a href=""><i class="fa-brands fa-css3-alt"></i> CSS</a>
                     <a href=""><i class="fa-brands fa-js"></i> JavaScript</a>
                     <a href=""><i class="fa-brands fa-react"></i> React</a>

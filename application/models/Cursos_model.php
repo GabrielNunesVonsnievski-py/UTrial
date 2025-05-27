@@ -15,6 +15,12 @@ class Cursos_model extends CI_Model{
         return $cursos->result();
     }
 
+    public function getCursoHTML() {
+        $this->utrial->where('titulo' , 'HTML');
+        $query = $this->utrial->get('aulas');
+        return $query->result_array();
+    }
+
     public function listaCursoNomeID(){
         $this->utrial->select('id');
         $this->utrial->select('nome');

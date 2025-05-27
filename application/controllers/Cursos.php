@@ -42,8 +42,7 @@ class Cursos extends CI_Controller{
 
 	}
 
-		public function cursoHTML()
-	{
+	public function HTML(){
 
 		$data = array(
 			'titulo' => 'Utrial | Cursos',
@@ -62,8 +61,10 @@ class Cursos extends CI_Controller{
 
 		);
 
+		$data['getCursoHTML'] = $this->Cursos_model->getCursoHTML();
+
 		$this->load->view('layout/header', $data);
-		$this->load->view('cursos/cursoHTML');
+		$this->load->view('cursos/HTML');
 		$this->load->view('layout/footer');
 
 	}

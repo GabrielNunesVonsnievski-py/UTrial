@@ -39,7 +39,9 @@
                                                 <h5 class="curso-nome"><?php echo $curso->nome; ?></h5>
                                                 <p class="curso-preco">$ <?php echo $curso->valor; ?></p>
                                                 <p class="curso-duracao"><?php echo $curso->duracao; ?> Horas</p>
+                                                <a href="<?php echo base_url('cursos/' . $curso->nome) ?>">
                                                 <button class="btn botao">Inscrever-se!</button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

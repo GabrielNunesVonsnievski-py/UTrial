@@ -35,7 +35,6 @@
                     <thead>
                         <tr>
                             <th class="text-center">#</th>
-                            <th class="text-center">ID Curso</th>
                             <th class="text-center">Título</th>
                             <th class="text-center">Descrição</th>
                             <th class="text-center">URL</th>
@@ -48,7 +47,6 @@
                             <?php foreach ($getListaAulas as $aulas): ?>
                                 <tr>
                                     <td class="text-center"><?php echo $aulas['id']; ?></td>
-                                    <td class="text-left"><?php echo strtoupper($aulas['curso_id']); ?></td>
                                     <td class="text-center"><?php echo $aulas['titulo']; ?></td>
                                     <td class="text-center"><?php echo $aulas['descricao']; ?></td>
                                     <td class="text-center"><?php echo $aulas['video_url']; ?></td>

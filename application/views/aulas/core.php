@@ -22,7 +22,7 @@
 
             <div class="text-right">
                 <button class="butNew2">
-                    <a href="<?php echo base_url('/alunos') ?>"><i class="fa-solid fa-backward"></i></a>
+                    <a href="<?php echo base_url('/aulas') ?>"><i class="fa-solid fa-backward"></i></a>
                 </button>
             </div>
             <br>

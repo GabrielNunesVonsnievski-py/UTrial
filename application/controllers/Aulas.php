@@ -150,5 +150,6 @@ class Aulas extends CI_Controller{
 		$dados = $this->input->post();
 
 		$this->Aulas_model->insert($dados);
+		echo base_url('/aulas');
 	}
 }
