@@ -7,10 +7,13 @@ class Aulas extends CI_Controller{
 		parent:: __construct();
 
 		$this->load->model('Aulas_model');
+		$this->load->model('Cursos_model');
 
 		if(!$this->session->userdata('is_admin')) {
 			$this->session->set_flashdata('info', 'Você você não tem permissão para essa página!' );
 		}
+
+		$this->load->library('form_validation');
 	}
 
 	public function index()
@@ -68,7 +71,7 @@ class Aulas extends CI_Controller{
 
 	}
 
-	    public function adicionarAulas ()
+	    public function adicionarAulas ($id = null)
 	{
 		$data = array(
 			'titulo' => 'Utrial | Aulas',
@@ -87,18 +90,67 @@ class Aulas extends CI_Controller{
 
 		);
 
+		$cursos = $this->Cursos_model->listaCursoNomeID();
+			$options = array();
+
+			foreach($cursos as $curso) {
+				$options[$curso->id] = $curso->nome;
+			}
+
+		$data['listaCursoNomeID'] = $options;
+
+		// var_dump($data['listaCursoNomeID']);
+
 		$this->load->view('layout/header', $data);
-		$this->load->view('aulas/adicionarAulas');
+		$this->load->view('aulas/adicionarAulas', $data);
 		$this->load->view('layout/footer');
 
 	}
 
 	public function deletar($id) {
-        $this->load->model('Aulas_model');
         if ($this->Aulas_model->deletar($id)) {
             echo json_encode(['status' => 'success']);
         } else {
             echo json_encode(['status' => 'erro']);
         }
+	}
+
+	public function adicionar() {
+		// var_dump($this->input->post());
+
+		// form_validation
+		  $rules = [
+            [
+                'field' => 'Curso ID',
+                'label' => 'Curso ID',
+                'rules' => 'required',
+                'errors' => ['required' => 'A descrição não pode estar em branco.']
+            ],
+            [
+                'field' => 'utensilios',
+                'label' => 'Utensílios Disponíveis',
+                'rules' => 'required',
+                'errors' => ['required' => 'Os utensílios não podem estar em branco.']
+            ],
+            [
+                'field' => 'regras',
+                'label' => 'Regras de Uso',
+                'rules' => 'required',
+                'errors' => ['required' => 'As regras não podem estar em branco.']
+            ],
+            [
+                'field' => 'valor',
+                'label' => 'Valor do Aluguel',
+                'rules' => 'required|greater_than[0]',
+                'errors' => [
+                    'required' => 'O valor do aluguel não pode estar em branco.',
+                    'greater_than' => 'O valor do aluguel deve ser maior que 0.'
+                ]
+            ]
+        ];
+        $this->form_validation->set_rules($rules);
+        $this->form_validation->set_error_delimiters('<div><b style="margin-right: 8px;">Atenção!</b>', '</div>');
+		$dados = $this->input->post();
+
 	}
 }

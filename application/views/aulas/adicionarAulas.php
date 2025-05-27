@@ -4,7 +4,7 @@
 
     <?php  $this->load->view('layout/sidebar'); ?>
 
-    <div class="main-content">
+    <div class="main-content" ng-app="appUtrial" ng-controller="UtrialController">
         <div class="container-fluid">
 
             <div class="page-header">
@@ -27,42 +27,49 @@
                             <strong style="font-size: 20px;">ADICIONAR AULA</strong>
                         </div>
                             <div class="card-body">
-                                <form action=" " method="POST">
-                                    <div class="row g-3">
-
-                                    <div class="card-body">
-                                        <form action=" " method="POST">
-                                            <div class="row g-3">
-
-                                                <div class="col-md-6 mt-3">Curso ID:
-                                                    <input name="cursoID" type="text" class="form-control text-center">
-                                                </div>
-
-                                                <div class="col-md-6 mt-3">Título:
-                                                    <input name="titulo" type="text" class="form-control text-center">
-                                                </div>
-
-                                                <div class="col-md-6 mt-3">Descrição:
-                                                    <input name="descricao" type="text" class="form-control text-center">
-                                                </div>
-
-                                                <div class="col-md-6 mt-3">URL:
-                                                    <input name="videoURL" type="text" class="form-control text-center">
-                                                </div>
-
-                                            </div>
-                                        </form>
+                                <?php echo form_open('Aulas/adicionar'); ?>
+                                    <div class="col-md-4 mt-3 selectCurso">Nome do curso:
+                                        <?php echo form_dropdown('curso_id', $listaCursoNomeID) ?>
                                     </div>
 
-                                        <div class="col-12 text-center mt-3">
-                                            <button type="submit" class="btn btn-respirando btn-dark">
-                                                Adicionar&nbsp; <i class="fa-solid fa-check"></i>
-                                            </button>
-                                        </div>
-
+                                    <div class="col-md-4 mt-3">Título:
+                                        <?php echo form_input([
+                                            'nome' => 'titulo',
+                                            'placeholder' => 'Título da aula',
+                                            'class' => 'form-control',
+                                            'value' => $this->input->post('titulo'),
+                                        ]) ?>
                                     </div>
-                                </form>
+
+                                    <div class="col-md-4 mt-3">Descrição:
+                                        <?php echo form_input([
+                                            'nome' => 'descricao',
+                                            'placeholder' => 'descrição da aula',
+                                            'class' => 'form-control',
+                                            'value' => $this->input->post('descricao'),
+                                        ]) ?>
+                                    </div>
+
+                                    <div class="col-md-4 mt-3">URL do vídeo:
+                                        <?php echo form_input([
+                                            'nome' => 'video_url',
+                                            'placeholder' => 'URL do vídeo',
+                                            'class' => 'form-control',
+                                            'value' => $this->input->post('videoURL'),
+                                        ]) ?>
+                                    </div>
+
+                                    <div class="col-12 text-center mt-3">
+                                        <button type="submit" class="btn btn-dark">
+                                            Adicionar&nbsp; <i class="fa-solid fa-check"></i>
+                                        </button>
+                                    </div>
+
+                                <?php echo form_close(); ?>
+
                             </div>
+
+                            <br>
                     </div>
                 </div>
             </div>
@@ -78,15 +85,19 @@
     </footer>
 </div>
 
-<style>
+<script>
 
-.btn-respirando {
-  animation: respirar 2s infinite ease-in-out;
-}
+</script>
+
+<style>
 
 .card-header{
     border-radius: 10px 10px;
     box-shadow: 2px 2px 20px;
+}
+
+.form-control{
+    display: flex;
 }
 
 </style>
