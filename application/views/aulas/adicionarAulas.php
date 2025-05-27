@@ -40,7 +40,7 @@
                                     <?php echo form_input([
                                         'name' => 'titulo',
                                         'id' => 'titulo',
-                                        'placeholder' => 'Título da aula',
+                                        'placeholder' => 'Nome da linguagem ou do curso',
                                         'class' => 'form-control',
                                         'value' => $this->input->post('titulo'),
                                     ]); ?>
@@ -51,7 +51,7 @@
                                     <?php echo form_input([
                                         'name' => 'descricao',
                                         'id' => 'descricao',
-                                        'placeholder' => 'Descrição da aula',
+                                        'placeholder' => 'Aula X - breve resumo da aula',
                                         'class' => 'form-control',
                                         'value' => $this->input->post('descricao'),
                                     ]); ?>
@@ -80,7 +80,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 

@@ -116,9 +116,9 @@ class Aulas extends CI_Controller{
 	}
 
 	public function adicionar() {
-		var_dump($this->input->post());
+		// var_dump($this->input->post());
 
-		// form_validation
+		//form_validation
 		$rules = [
             [
                 'field' => 'curso_id',
@@ -149,5 +149,6 @@ class Aulas extends CI_Controller{
         $this->form_validation->set_error_delimiters('<div><b style="margin-right: 8px;">Atenção!</b>', '</div>');
 		$dados = $this->input->post();
 
+		$this->Aulas_model->insert($dados);
 	}
 }
