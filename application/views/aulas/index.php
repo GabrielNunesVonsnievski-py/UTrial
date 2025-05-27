@@ -20,9 +20,9 @@
                 </div>
             </div>
 
-            <div class="#" style="text-center">
+            <div class="text-right">
                 <a href="<?php echo base_url('/aulas/AdicionarAulas'); ?>">
-                    <button class="btn btn-dark btnADCurso">Adicionar Aulas</button>
+                    <button class="btn botao">Nova Aula <i class="fa-solid fa-plus"></i></button>
                 </a>
             </div>
             <br>
@@ -258,13 +258,24 @@ angular.module("appUtrial", []).controller('UtrialController', function ($scope,
     transform: scale(1.3);
 }
 
-.btnADCurso{
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.botao {
+    width: auto;
+    padding: 5px 8px;
+    font-weight: 500 !important;
+    font-size: 14px;
+    background: linear-gradient(90deg, #FF416C, #FF4B2B);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
 }
 
-.btnADCurso:hover {
-    transform: translateY(-5px);
-    background-color:rgb(77, 77, 77)
+.botao:hover {
+  transform: scale(1.05);
 }
+
 
 </style>

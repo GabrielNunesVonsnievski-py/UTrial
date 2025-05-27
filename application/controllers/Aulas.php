@@ -116,36 +116,33 @@ class Aulas extends CI_Controller{
 	}
 
 	public function adicionar() {
-		// var_dump($this->input->post());
+		var_dump($this->input->post());
 
 		// form_validation
-		  $rules = [
+		$rules = [
             [
-                'field' => 'Curso ID',
+                'field' => 'curso_id',
                 'label' => 'Curso ID',
                 'rules' => 'required',
                 'errors' => ['required' => 'A descrição não pode estar em branco.']
             ],
             [
-                'field' => 'utensilios',
-                'label' => 'Utensílios Disponíveis',
+                'field' => 'titulo',
+                'label' => 'Título',
                 'rules' => 'required',
-                'errors' => ['required' => 'Os utensílios não podem estar em branco.']
+                'errors' => ['required' => 'O Título não pode estar em branco.']
             ],
             [
-                'field' => 'regras',
-                'label' => 'Regras de Uso',
+                'field' => 'descricao',
+                'label' => 'Descrição',
                 'rules' => 'required',
-                'errors' => ['required' => 'As regras não podem estar em branco.']
+                'errors' => ['required' => 'A Descrição não pode estar em branco.']
             ],
             [
-                'field' => 'valor',
-                'label' => 'Valor do Aluguel',
-                'rules' => 'required|greater_than[0]',
-                'errors' => [
-                    'required' => 'O valor do aluguel não pode estar em branco.',
-                    'greater_than' => 'O valor do aluguel deve ser maior que 0.'
-                ]
+                'field' => 'video_url',
+                'label' => 'URL do vídeo',
+                'rules' => 'required',
+                'errors' => ['required' => 'A URL do video não pode estar em branco.']
             ]
         ];
         $this->form_validation->set_rules($rules);

@@ -50,9 +50,9 @@
 
             <?php endif; ?>
 
-            <div class="#" style="text-center">
+            <div class="text-center">
                 <a href="<?php echo base_url('/cursos'); ?>">
-                    <button class="btn btn-dark btn-respirando">Cursos disponíveis</button>
+                    <button class="btn botao btn-respirando">CURSOS DISPONÍVEIS</button>
                 </a>
             </div>
             <br>
@@ -92,19 +92,35 @@
 <style>
 
 .btn{
-    height: 30px;
-    width: 150px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.47);
 }
 
 @keyframes respirar {
-  0% { transform: scale(1); opacity: 0.5; }
-  50% { transform: scale(1.05); opacity: 7; }
-  100% { transform: scale(1); opacity: 0.5; }
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
 }
 
 .btn-respirando {
-  animation: respirar 2s infinite ease-in-out;
+  animation: respirar 1s infinite ease-in-out;
+  width: 150px;
+  height: 40px;
+}
+
+.botao {
+  width: 200px;
+  padding: 10px;
+  background: linear-gradient(90deg, #FF416C, #FF4B2B);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.botao:hover {
+  transform: scale(1.05);
 }
 
 </style>

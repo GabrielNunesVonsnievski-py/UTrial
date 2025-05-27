@@ -20,6 +20,12 @@
                 </div>
             </div>
 
+            <div class="text-right">
+                <button class="butNew2">
+                    <a href="<?php echo base_url('/alunos') ?>"><i class="fa-solid fa-backward"></i></a>
+                </button>
+            </div>
+            <br>
             <div class="row justify-content-center">
                 <div class="col-md-12 text-center">
                     <div class="card">
@@ -61,12 +67,11 @@
                                             </div>
                                         </form>
                                     </div>
-
-                                        <div class="col-12 text-center mt-3">
-                                            <button type="submit" class="btn btn-respirando btn-dark">
-                                                <i class="fa-solid fa-id-card"></i> &nbsp;Salvar
-                                            </button>
-                                        </div>
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit" class="btn botao">
+                                            Salvar&nbsp; <i class="fa-solid fa-check"></i>
+                                        </button>
+                                    </div>
 
                                     </div>
                                 </form>
@@ -101,6 +106,46 @@
 .card-header{
     border-radius: 10px 10px;
     box-shadow: 2px 2px 20px;
+}
+
+.botao {
+  width: 110px;
+  padding: 5px 8px;
+  background: linear-gradient(90deg, #FF416C, #FF4B2B);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.botao:hover {
+  transform: scale(1.05);
+}
+
+.butNew2 {
+    padding: 5px 8px;
+    border: none;
+    border-radius: 2px;
+    color: #000!important;
+    font-weight: 500 !important;
+    font-size: 14px;
+    margin: 0px 0px 0px 0;
+    transition: 0.5s;
+    letter-spacing: 0px;
+    text-decoration: none!important;
+    display: inline-block;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgb(255, 255, 255);
+    background: #e2e2e2;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=0 );
+}
+ .butNew2:hover {
+    color: #fff;
+    text-decoration: none!important;
+    background: #e2e2e2;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F2F2F2', endColorstr='#fefefe',GradientType=0 );
+    transform: scale(1.3);
 }
 
 </style>

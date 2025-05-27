@@ -53,8 +53,8 @@
                                         </div>
 
                                         <div class="col-12 text-center mt-3">
-                                            <button type="submit" class="btn btn-respirando btn-dark">
-                                                <i class="fa-solid fa-id-card"></i> &nbsp;Salvar
+                                            <button type="submit" class="btn botao">
+                                                Salvar&nbsp;&nbsp; <i class="fa-solid fa-id-card"></i>
                                             </button>
                                         </div>
 
@@ -97,5 +97,21 @@
     margin-left: auto;
     margin-right: auto;
     max-width: fit-content;
+}
+
+.botao {
+  width: 110px;
+  padding: 2px 2px 2px 2px;
+  background: linear-gradient(90deg, #FF416C, #FF4B2B);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.botao:hover {
+  transform: scale(1.05);
 }
 </style>

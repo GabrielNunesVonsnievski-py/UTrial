@@ -268,4 +268,25 @@ angular.module("appUtrial", []).controller('UtrialController', function ($scope,
   animation: respirar 2s infinite ease-in-out;
 }
 
+.botao {
+  width: auto;
+  padding: 6px 6px 6px 6px;
+  background: linear-gradient(90deg, #FF416C, #FF4B2B);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.botao:hover {
+  transform: scale(1.05);
+}
+
+.btn{
+    border-color: black;
+
+}
+
 </style>

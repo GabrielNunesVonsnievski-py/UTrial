@@ -26,50 +26,57 @@
                         <div class="card-header d-block text-center bg-dark text-white">
                             <strong style="font-size: 20px;">ADICIONAR AULA</strong>
                         </div>
-                            <div class="card-body">
-                                <?php echo form_open('Aulas/adicionar'); ?>
-                                    <div class="col-md-4 mt-3 selectCurso">Nome do curso:
-                                        <?php echo form_dropdown('curso_id', $listaCursoNomeID) ?>
-                                    </div>
+                        <div class="card-body">
+                            <?php echo form_open('Aulas/adicionar'); ?>
 
-                                    <div class="col-md-4 mt-3">Título:
-                                        <?php echo form_input([
-                                            'nome' => 'titulo',
-                                            'placeholder' => 'Título da aula',
-                                            'class' => 'form-control',
-                                            'value' => $this->input->post('titulo'),
-                                        ]) ?>
-                                    </div>
+                            <div class="row">
+                                <div class="col-md-6 mt-3">
+                                    <label for="curso_id">Nome do curso:</label>
+                                    <?php echo form_dropdown('curso_id', $listaCursoNomeID, '', ['class' => 'form-control', 'id' => 'curso_id']); ?>
+                                </div>
 
-                                    <div class="col-md-4 mt-3">Descrição:
-                                        <?php echo form_input([
-                                            'nome' => 'descricao',
-                                            'placeholder' => 'descrição da aula',
-                                            'class' => 'form-control',
-                                            'value' => $this->input->post('descricao'),
-                                        ]) ?>
-                                    </div>
+                                <div class="col-md-6 mt-3">
+                                    <label for="titulo">Título:</label>
+                                    <?php echo form_input([
+                                        'name' => 'titulo',
+                                        'id' => 'titulo',
+                                        'placeholder' => 'Título da aula',
+                                        'class' => 'form-control',
+                                        'value' => $this->input->post('titulo'),
+                                    ]); ?>
+                                </div>
 
-                                    <div class="col-md-4 mt-3">URL do vídeo:
-                                        <?php echo form_input([
-                                            'nome' => 'video_url',
-                                            'placeholder' => 'URL do vídeo',
-                                            'class' => 'form-control',
-                                            'value' => $this->input->post('videoURL'),
-                                        ]) ?>
-                                    </div>
+                                <div class="col-md-6 mt-3">
+                                    <label for="descricao">Descrição:</label>
+                                    <?php echo form_input([
+                                        'name' => 'descricao',
+                                        'id' => 'descricao',
+                                        'placeholder' => 'Descrição da aula',
+                                        'class' => 'form-control',
+                                        'value' => $this->input->post('descricao'),
+                                    ]); ?>
+                                </div>
 
-                                    <div class="col-12 text-center mt-3">
-                                        <button type="submit" class="btn btn-dark">
-                                            Adicionar&nbsp; <i class="fa-solid fa-check"></i>
-                                        </button>
-                                    </div>
-
-                                <?php echo form_close(); ?>
-
+                                <div class="col-md-6 mt-3">
+                                    <label for="video_url">URL do vídeo:</label>
+                                    <?php echo form_input([
+                                        'name' => 'video_url',
+                                        'id' => 'video_url',
+                                        'placeholder' => 'URL do vídeo',
+                                        'class' => 'form-control',
+                                        'value' => $this->input->post('video_url'),
+                                    ]); ?>
+                                </div>
                             </div>
 
-                            <br>
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn botao">
+                                    Adicionar&nbsp; <i class="fa-solid fa-check"></i>
+                                </button>
+                            </div>
+
+                            <?php echo form_close(); ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -100,4 +107,21 @@
     display: flex;
 }
 
+.botao {
+    width: 120px;
+    padding: 5px 8px;
+    font-weight: 500 !important;
+    font-size: 14px;
+    background: linear-gradient(90deg, #FF416C, #FF4B2B);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.botao:hover {
+  transform: scale(1.05);
+}
 </style>

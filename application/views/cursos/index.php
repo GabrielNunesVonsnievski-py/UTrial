@@ -39,7 +39,7 @@
                                                 <h5 class="curso-nome"><?php echo $curso->nome; ?></h5>
                                                 <p class="curso-preco">$ <?php echo $curso->valor; ?></p>
                                                 <p class="curso-duracao"><?php echo $curso->duracao; ?> Horas</p>
-                                                <button class="btn btn-success">Adquirir</button>
+                                                <button class="btn botao">Inscrever-se!</button>
                                             </div>
                                         </div>
                                     </div>
@@ -118,6 +118,22 @@
     border-radius: 20px;
     font-size: 0.8rem;
     letter-spacing: 0.5px;
+}
+
+.botao {
+  width: 110px;
+  padding: 2px 2px 2px 2px;
+  background: linear-gradient(90deg, #FF416C, #FF4B2B);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.botao:hover {
+  transform: scale(1.05);
 }
 
 </style>
